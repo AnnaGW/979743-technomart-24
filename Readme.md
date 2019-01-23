@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Анна Богословская](https://up.htmlacademy.ru/htmlcss/24/user/979743).
-* Наставник: `Андрей Ефимов https://vk.com/efiand вторник, суббота`.
+* Наставник: [Андрей Ефимов] (https://htmlacademy.ru/profile/efiand).
 
 ---
 
