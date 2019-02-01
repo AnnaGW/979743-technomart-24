@@ -7,204 +7,207 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>  <!--  -->
-      <header class="main-header">
-          <div class="header-fon"> <!--фон этой части хедера во всю ширину окна браузера -->
-              <div class="container"> <!--центровщик-->
-                  <a class="header-logo"> <!-- href не указываю т.к. это главная стр  -->
-                      <img src="img/logo.png" alt="Логотип Техномарт"> <!-- здесь и далее в <img>: размеры потом укажу, пока не знаю -->
-                  </a>
-                  <label for="search">Поиск:</label>
-                  <input id="search">
-                   <ul> <!--Счетчики кол-ва закладок и кол-ва товаров вставляются, видимо, какой-то php-функцией; пока пропущу их -->
-                      <li><a href="#">Закладки</a></li>
-                      <li><a href="#">Корзина</a></li>
-                      <li><a href="#">Оформить заказ</a></li>
-                  </ul>
-              </div> <!--container -->
-          </div><!--header-fon -->
-          <div class="container"> <!--центровщик-->
-              <p class="header-description">Интернет-магазин строительных материалов и инструментов для ремонта</p>
-              <div class="header-info"> <!--обертка для размещения тел и адреса по центру-->
-                  <a href="tel:+78125550555" class="header-phone">+7 (812) 555-05-55</a>
-                  <p class="header-address">г. Санкт-Петербург, Б.Конюшенная, д. 19/8</p>
-              </div> <!--header-info -->
-              <ul class="header-person">
-                  <li class="header-enter"><a href="#">Войти</a></li>
-                  <li class="header-reg"><a href="#">Реистрация</a></li>
-                  <li class="header-avatar"><img src="avatar.png" alt="Аватар"></li>
-                  <li class="header-name"><a href="#">Равшан Джамшутович</a></li> <!-- ФИО вставляется, видимо, какой-то php-функцией; пока напишу текстом -->
-                  <li class="header-reg"><a href="#"><img src="exit.png" alt="Выход"></a></li>
-                  <li class="header-reg"><a href="#">Мои заказы</a></li>
-                  <li class="header-reg"><a href="#">Личный кабинет</a></li>
-              </ul>
-          </div> <!--container-->
-          <nav class="container header-navigation"> <!--<nav> выполнит роль центровщика-->
-              <ul>
-                  <li><a>Главная</a></li>
-                  <li><a href="#">Компания</a></li>
-                  <li><a href="catalogue.html">Каталог</a></li>
-                  <li><a href="#">Новости</a></li>
-                  <li><a href="#">Спецпредложения</a></li>
-                  <li><a href="#">Доставка</a></li>
-                  <li><a href="#">Контакты</a></li>
-              </ul>
+    <header class="main-header">
+      <div class="header-top"> <!--темно синий фон во всю ширину окна браузера -->
+        <div class="container"> <!--центровщик-->
+          <a class="header-logo" href="index.html">
+            <img src="img/logo.png" alt="Логотип Техномарт">
+          </a>
+          <label for="search">Поиск:</label>
+          <input id="search">
+          <ul>
+            <li><a class="header-bookmarks" href="#">Закладки: 0</a></li>
+            <li><a class="header-cart" href="#">Корзина: 0</a></li>
+            <li><a class="header-checkout" href="#">Оформить заказ</a></li>
+          </ul>
+        </div> <!--container -->
+      </div><!--header-top -->
+      <div class="header-bottom"> <!-- серый фон во всю ширину окна браузера -->
+        <div class="container"> <!--центровщик-->
+          <p class="header-description">Интернет-магазин строительных материалов и инструментов для ремонта</p>
+          <div class="header-info"> <!--обертка для размещения тел и адреса по центру-->
+            <a class="header-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
+            <p class="header-address">г. Санкт-Петербург, Б.Конюшенная, д. 19/8</p>
+          </div> <!--header-info -->
+          <ul class="header-person">
+            <li><a class="header-person-name" href="#">Равшан Джамшутович</a></li>
+            <li><a class="header-person-exit" href="#"><span class="visually-hidden">Выход</span></a></li>
+            <li><a class="header-reg" href="#">Мои заказы</a></li>
+            <li><a class="header-reg" href="#">Личный кабинет</a></li>
+          </ul>
+          <nav class="header-navigation">
+            <ul>
+              <li><a class="header-navigation-item">Главная</a></li>
+              <li><a class="header-navigation-item" href="#">Компания</a></li>
+              <li><a class="header-navigation-item" href="catalogue.html">Каталог</a></li>
+              <li><a class="header-navigation-item" href="#">Новости</a></li>
+              <li><a class="header-navigation-item" href="#">Спецпредложения</a></li>
+              <li><a class="header-navigation-item" href="#">Доставка</a></li>
+              <li><a class="header-navigation-item" href="#">Контакты</a></li>
+            </ul>
           </nav>
-      </header>
-      <main class="container"> <!--Центровщик -->
-          <nav class="bread-crumbs"> <!--размечаю без учета, что на разных страницах разные элементы -->
-              <ul class="bread-crumbs-list">
-                  <li><a href="index.html"><img src="img/home.png" alt="на главную"></a></li>
-                  <li><a href="#">Каталог</a></li> <!--комментарии см внизу, п.1 -->
-                  <li><a href="#">Инструмент</a></li>
-                  <li><a>Перфораторы</a></li>
-              </ul>
-          </nav>
-          <section class="perforators">
-                <h2>ПЕРФОРАТОРЫ</h2>
-<!--блок фильтров слева и блок сортировки пока не верстаю, см. комментарии внизу -->
-                <ul class="perforators-list">
-                    <li class="perforator-item">
-                        <figure class="perforator-about">
-                            <a class="buy" href="#">Купить</a> <!--в названии класса пропущен префикс раздела perforators, п.ч. этот стиль (я так думаю) будет одинокав во всех разделах каталога-->
-                            <a class="inbookmarks" href="#">В закладки</a>
-                            <img src="perforator1.png" alt="Перфоратор BOSH BFG 3000">
-                            <figcaption class="perforator-name">Перфоратор BOSH BFG 3000</figcaption>
-                        </figure>
-                        <p class="price-old">22500 P.</p><!--в названии класса пропущен префикс раздела perforators, п.ч. этот стиль (я так думаю) будет одинокав во всех разделах каталога-->
-                        <p class="price-new">15500 P.</p>
-                    </li>
-                    <li class="perforator-item">
-                        <figure class="perforator-about">
-                            <a class="buy" href="#">Купить</a>
-                            <a class="inbookmarks" href="#">В закладки</a>
-                            <img src="perforator1.png" alt="Перфоратор BOSH BFG 6000">
-                            <figcaption class="perforator-name">Перфоратор BOSH BFG 6000</figcaption>
-                        </figure>
-                        <p class="price-old">30500 P.</p>
-                        <p class="price-new">25500 P.</p>
-                    </li>
-                    <li class="perforator-item new-product"> <!-- класс new-product добавляет наклейку "new" в правом верхнем углу -->
-                        <figure class="perforator-about">
-                            <a class="buy" href="#">Купить</a>
-                            <a class="inbookmarks" href="#">В закладки</a>
-                            <img src="perforator1.png" alt="Перфоратор BOSH BFG 2000">
-                            <figcaption class="perforator-name">Перфоратор BOSH BFG 2000</figcaption>
-                        </figure>
-                        <!-- <p class="price-old">30500 P.</p> не уверена как лучше: удалить из верстки этот <p> в данном пункте или стилизовать как невидимый объект -->
-                        <p class="price-new">12500 P.</p>
-                    </li>
-                    <li class="perforator-item">
-                        <figure class="perforator-about">
-                            <a class="buy" href="#">Купить</a>
-                            <a class="inbookmarks" href="#">В закладки</a>
-                            <img src="perforator1.png" alt="Перфоратор BOSH BFG 3000">
-                            <figcaption class="perforator-name">Перфоратор BOSH BFG 3000</figcaption>
-                        </figure>
-                        <p class="price-old">22500 P.</p>
-                        <p class="price-new">15500 P.</p>
-                    </li>
-                    <li class="perforator-item new-product">
-                        <figure class="perforator-about">
-                            <a class="buy" href="#">Купить</a>
-                            <a class="inbookmarks" href="#">В закладки</a>
-                            <img src="perforator1.png" alt="Перфоратор BOSH BFG 6000">
-                            <figcaption class="perforator-name">Перфоратор BOSH BFG 6000</figcaption>
-                        </figure>
-                        <p class="price-old">30500 P.</p>
-                        <p class="price-new">25500 P.</p>
-                    </li>
-                    <li class="perforator-item">
-                        <figure class="perforator-about">
-                            <a class="buy" href="#">Купить</a>
-                            <a class="inbookmarks" href="#">В закладки</a>
-                            <img src="perforator1.png" alt="Перфоратор BOSH BFG 2000">
-                            <figcaption class="perforator-name">Перфоратор BOSH BFG 2000</figcaption>
-                        </figure>
-                        <!-- <p class="price-old">30500 P.</p> не уверена как лучше: удалить из верстки этот <p> в данном пункте или стилизовать как невидимый объект -->
-                        <p class="price-new">12500 P.</p>
-                    </li>
-                    <li class="perforator-item new-product">
-                        <figure class="perforator-about">
-                            <a class="buy" href="#">Купить</a>
-                            <a class="inbookmarks" href="#">В закладки</a>
-                            <img src="perforator1.png" alt="Перфоратор BOSH BFG 3000">
-                            <figcaption class="perforator-name">Перфоратор BOSH BFG 3000</figcaption>
-                        </figure>
-                        <p class="price-old">22500 P.</p>
-                        <p class="price-new">15500 P.</p>
-                    </li>
-                    <li class="perforator-item">
-                        <figure class="perforator-about">
-                            <a class="buy" href="#">Купить</a>
-                            <a class="inbookmarks" href="#">В закладки</a>
-                            <img src="perforator1.png" alt="Перфоратор BOSH BFG 6000">
-                            <figcaption class="perforator-name">Перфоратор BOSH BFG 6000</figcaption>
-                        </figure>
-                        <p class="price-old">30500 P.</p>
-                        <p class="price-new">25500 P.</p>
-                    </li>
-                    <li class="perforator-item">
-                        <figure class="perforator-about">
-                            <a class="buy" href="#">Купить</a>
-                            <a class="inbookmarks" href="#">В закладки</a>
-                            <img src="perforator1.png" alt="Перфоратор BOSH BFG 2000">
-                            <figcaption class="perforator-name">Перфоратор BOSH BFG 2000</figcaption>
-                        </figure>
-                        <!-- <p class="price-old">30500 P.</p> не уверена как лучше: удалить из верстки этот <p> в данном пункте или стилизовать как невидимый объект -->
-                        <p class="price-new">12500 P.</p>
-                    </li>
-                </ul>
-                <!--блок с перебором страниц тоже пока пропущу, сверстаю попозже -->
-          </section>
-          <section class="words">
-              <h2>ПАРА СЛОВ О ПЕРФОРАТОРАХ</h2>
-              <p>Перфоратор - универсальный стротельный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор "трехрежимников": в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
-          </section>
-      </main>
-      <footer class="main-footer">
-          <div class="footer-light-fon">
-              <div class="container"> <!--центровщик-->
-                  <a class="footer-logo">
-                    <img src="img/logo.png" alt="Логотип Техномарт">
-                  </a>
-                  <p class="footer-address">г. Санкт-Петербург, Б.Конюшенная, д. 19/8</p>
-                  <a href="tel:+78125550555" class="footer-phone">+7 (812) 555-05-55</a>
-                  <ul class="footer-company">
-                      <li><a href="#">Компания</a></li>
-                      <li><a href="#">Новости</a></li>
-                      <li><a href="catalogue.html">Каталог</a></li>
-                      <li><a href="#">Доставка</a></li>
-                      <li><a href="#">Контакты</a></li>
-                  </ul>
-                  <ul class="footer-products">
-                      <li><a href="#">Материалы</a></li>
-                      <li><a href="#">Техника</a></li>
-                      <li><a href="#">Инструмент</a></li>
-                      <li><a href="#">Спецпредложения</a></li>
-                  </ul>
-              </div> <!--container -->
-          </div> <!-- footer-light-fon-->
-          <div class="footer-dark-fon">
-              <div class="container"> <!--центровщик-->
-                  <p>&copy; 2010-2019 Компания "Техномарт" <br>Все права защищены</p>
-                  <ul>
-                      <li><a class="social-button" href="#"> Вконтакте</a></li>
-                      <li><a class="social-button" href="#"> Фейсбук</a></li>
-                      <li><a class="social-button" href="#"> Инстаграм</a></li>
-                  </ul>
-                  <p>Обратная связь:<br>
-                  <a class="footer-link" href="#">mail@htmlacademy.ru</a></p>
-                  <p>Разработано -<br>
-                  <a class="footer-link" href="#">htmlacademy.ru</a></p>
-              </div> <!--container -->
-          </div> <!-- footer-dark-fon-->
-      </footer>
-      <section class="modal modal-cart">
-          <h2>Товар добавлен в корзину</h2>
-          <button class="modal-cart-order">Оформить заказ</button>
-           <button class="modal-cart-continue">Продолжить покупки</button>
-          <span class="modal-close">x</span>
+        </div> <!--container-->
+      </div><!--header-bottom -->
+    </header>
+    <main class="container"> <!--Центровщик -->
+      <nav class="breadcrumbs">
+        <ul>
+          <li><a class="breadcrumbs-item" href="index.html"><span class="visually-hidden">На главную</span></a></li>
+          <li><a class="breadcrumbs-item" href="#">Каталог</a></li>
+          <li><a class="breadcrumbs-item" href="#">Инструмент</a></li>
+          <li><a class="breadcrumbs-item">Перфораторы</a></li>
+        </ul>
+      </nav>
+      <section class="products">
+        <h2>ПЕРФОРАТОРЫ</h2>
+        <!--блок фильтров слева и блок сортировки пока не верстаю, см. комментарии внизу -->
+        <ul class="products-list">
+          <li class="products-item"> <!-- 1 -->
+            <a class="products-buy" href="#">Купить</a>
+            <a class="products-inbookmarks" href="#">В закладки</a>
+            <figure class="products-about">
+              <img src="perforator-1.png" alt="Перфоратор BOSH BFG 3000">
+              <figcaption class="products-name">Перфоратор BOSH BFG 3000</figcaption>
+            </figure>
+            <del class="products-price-old">22500 P.</del>
+            <p class="products-price-new">15500 P.</p>
+          </li>
+          <li class="products-item"> <!-- 2 -->
+            <a class="products-buy" href="#">Купить</a>
+            <a class="products-inbookmarks" href="#">В закладки</a>
+            <figure class="products-about">
+              <img src="perforator-2.png" alt="Перфоратор BOSH BFG 6000">
+              <figcaption class="products-name">Перфоратор BOSH BFG 6000</figcaption>
+            </figure>
+            <del class="products-price-old">30500 P.</del>
+            <p class="products-price-new">25500 P.</p>
+          </li>
+          <li class="products-item products-new"> <!-- 3 -->
+            <a class="products-buy" href="#">Купить</a>
+            <a class="products-inbookmarks" href="#">В закладки</a>
+            <figure class="products-about">
+              <img src="perforator-3.png" alt="Перфоратор BOSH BFG 2000">
+              <figcaption class="products-name">Перфоратор BOSH BFG 2000</figcaption>
+            </figure>
+
+            <p class="products-price-new">12500 P.</p>
+          </li>
+          <li class="products-item"> <!-- 4 -->
+            <a class="products-buy" href="#">Купить</a>
+            <a class="products-inbookmarks" href="#">В закладки</a>
+            <figure class="products-about">
+              <img src="perforator-4.png" alt="Перфоратор BOSH BFG 3000">
+              <figcaption class="products-name">Перфоратор BOSH BFG 3000</figcaption>
+            </figure>
+            <del class="products-price-old">22500 P.</del>
+            <p class="products-price-new">15500 P.</p>
+          </li>
+          <li class="products-item products-new"> <!-- 5 -->
+            <a class="products-buy" href="#">Купить</a>
+            <a class="products-inbookmarks" href="#">В закладки</a>
+            <figure class="products-about">
+              <img src="perforator-5.png" alt="Перфоратор BOSH BFG 6000">
+              <figcaption class="products-name">Перфоратор BOSH BFG 6000</figcaption>
+            </figure>
+            <del class="products-price-old">30500 P.</del>
+            <p class="products-price-new">25500 P.</p>
+          </li>
+          <li class="products-item"> <!-- 6 -->
+            <a class="products-buy" href="#">Купить</a>
+            <a class="products-inbookmarks" href="#">В закладки</a>
+            <figure class="products-about">
+              <img src="perforator-6.png" alt="Перфоратор BOSH BFG 2000">
+              <figcaption class="products-name">Перфоратор BOSH BFG 2000</figcaption>
+            </figure>
+
+            <p class="products-price-new">12500 P.</p>
+          </li>
+          <li class="products-item products-new"> <!-- 7 -->
+            <a class="products-buy" href="#">Купить</a>
+            <a class="products-inbookmarks" href="#">В закладки</a>
+            <figure class="products-about">
+              <img src="perforator-7.png" alt="Перфоратор BOSH BFG 3000">
+              <figcaption class="products-name">Перфоратор BOSH BFG 3000</figcaption>
+            </figure>
+            <del class="products-price-old">22500 P.</del>
+            <p class="products-price-new">15500 P.</p>
+          </li>
+          <li class="products-item"> <!-- 8 -->
+            <a class="products-buy" href="#">Купить</a>
+            <a class="products-inbookmarks" href="#">В закладки</a>
+            <figure class="products-about">
+              <img src="perforator-8.png" alt="Перфоратор BOSH BFG 6000">
+              <figcaption class="products-name">Перфоратор BOSH BFG 6000</figcaption>
+            </figure>
+            <del class="products-price-old">30500 P.</del>
+            <p class="products-price-new">22500 P.</p>
+          </li>
+          <li class="products-item"> <!-- 9 -->
+            <a class="products-buy" href="#">Купить</a>
+            <a class="products-inbookmarks" href="#">В закладки</a>
+            <figure class="products-about">
+              <img src="perforator-9.png" alt="Перфоратор BOSH BFG 2000">
+              <figcaption class="products-name">Перфоратор BOSH BFG 2000</figcaption>
+            </figure>
+
+            <p class="products-price-new">12500 P.</p>
+          </li>
+        </ul>
+<!--блок с перебором страниц тоже пока пропущу, сверстаю попозже -->
       </section>
+      <section class="description">
+        <h2>ПАРА СЛОВ О ПЕРФОРАТОРАХ</h2>
+        <p>ерфоратор - универсальный стротельный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор "трехрежимников": в одном устройстве будут совмещены отбойный молоток и ударная дрель.
+        </p>
+      </section>
+    </main>
+    <footer class="main-footer">
+      <div class="footer-top">
+        <div class="container"> <!--центровщик-->
+          <a class="footer-logo">
+            <img src="img/logo.png" alt="Логотип Техномарт">
+          </a>
+          <ul class="footer-company">
+            <li><a href="#">Компания</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Каталог</a></li>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+          <p class="footer-contacts">г. Санкт-Петербург, Б.Конюшенная, д. 19/8
+            <a href="tel:+78125550555" class="footer-phone">+7 (812) 555-05-55</a>
+          </p>
+          <ul class="footer-products">
+            <li><a href="#">Материалы</a></li>
+            <li><a href="#">Техника</a></li>
+            <li><a href="#">Инструмент</a></li>
+            <li><a href="#">Спецпредложения</a></li>
+          </ul>
+        </div> <!--container -->
+      </div> <!-- footer-top-->
+      <div class="footer-bottom">
+        <div class="container"> <!--центровщик-->
+          <p>&copy; 2010-2019 Компания "Техномарт" <br>Все права защищены</p>
+          <ul>
+            <li><a class="footer-vk" href="#"> Вконтакте</a></li>
+            <li><a class="footer-fb" href="#"> Фейсбук</a></li>
+            <li><a class="footer-ig" href="#"> Инстаграм</a></li>
+          </ul>
+          <p>Обратная связь:
+            <a class="footer-link" href="#">mail@htmlacademy.ru</a>
+          </p>
+          <p>Разработано -
+            <a class="footer-link" href="#">htmlacademy.ru</a>
+          </p>
+        </div> <!--container -->
+      </div> <!-- footer-bottom-->
+    </footer>
+    <section class="modal modal-cart">
+        <h2>Товар добавлен в корзину</h2>
+        <button class="modal-cart-order">Оформить заказ</button>
+        <button class="modal-cart-continue">Продолжить покупки</button>
+        <span class="modal-close">x</span>
+    </section>
   </body>
 </html>
 <!--
