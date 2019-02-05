@@ -11,7 +11,7 @@
       <div class="header-top"> <!--темно синий фон во всю ширину окна браузера -->
         <div class="container"> <!--центровщик-->
           <a class="header-logo"> <!-- href не указываю т.к. это главная стр  -->
-            <img src="img/logo.png" alt="Логотип Техномарт"> <!-- здесь и далее в <img>: размеры потом укажу, пока не знаю -->
+            <img src="img/logo-technomart.svg" alt="Логотип Техномарт"><!-- здесь и далее в <img>: размеры потом укажу, пока не знаю -->
           </a>
           <label for="search">Поиск:</label>
           <input id="search">
@@ -69,7 +69,7 @@
       <section class="contacts">
         <h2>Контакты</h2>
         <p>Вы можете забрать товар сами, заехав в наш офис</p>
-        <a class="contacts-map"></a>
+        <a class="contacts-map" href="#"><span class="visually-hidden">Карта</span></a> <!--по клику на этой области должно вызываться модальное окно с большой картой -->
         <a class="button contacts-write" href="#">Заблудились? Напишите нам!</a>
       </section>
     </main>
@@ -101,9 +101,9 @@
         <div class="container"> <!--центровщик-->
           <p>&copy; 2010-2019 Компания "Техномарт" <br>Все права защищены</p>
           <ul>
-            <li><a class="footer-vk" href="#"><span class="visually-hidden">Вконтакте</span></a></li>
-            <li><a class="footer-fb" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
-            <li><a class="footer-ig" href="#"><span class="visually-hidden">Инстаграм</span></a></li>
+            <li><a class="footer-social footer-vk" href="#"><span class="visually-hidden">Вконтакте</span></a></li>
+            <li><a class="footer-social footer-fb" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
+            <li><a class="footer-social footer-ig" href="#"><span class="visually-hidden">Инстаграм</span></a></li>
           </ul>
           <p>Обратная связь:
             <a class="footer-link" href="#">mail@htmlacademy.ru</a>
@@ -117,11 +117,11 @@
     <section class="modal modal-login">
       <h2 class="visually-hidden">Обратная свзяь</h2>
       <!--Здесь будет форма -->
-      <span class="modal-close">x</span>
-    </section>  
+      <button class="modal-close js-modal-close"><span class="visually-hidden">закрыть</span></button>
+    </section>
     <section class="modal modal-map">
       <h2 class="visually-hidden">Ка до нас добраться</h2>
-      <span class="modal-close">x</span>
+      <button class="modal-close js-modal-close"><span class="visually-hidden">закрыть</span></button>
      </section>
   </body>
 </html>
