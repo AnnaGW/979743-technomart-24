@@ -54,8 +54,8 @@
         <h2 class="visually-hidden">Лучшие предложения</h2>
         <div class="best-offer-slideshow"> <!-- см. внизу п.1-->
           <h3></h3> <!-- надо ли заголовок?-->
-          <img src="img/slider-2.jpg" width="620" height="266" alt="Дрели">
-          <img src="img/slider-1.jpg" width="620" height="266" alt="Перфораторы">
+          <img src="img/best-offer-slider-2.jpg" width="620" height="266" alt="Дрели">
+          <img src="img/best-offer-slider-1.jpg" width="620" height="266" alt="Перфораторы">
           <a class="button best-offer-a" href="#">Открыть каталог</a>
         </div>
         <div class="best-offer-blocks best-offer-materials products-new"> <!--для наклейки new использован тот же класс, что и в catalogue.html -->
@@ -87,7 +87,7 @@
           <ul class="products-list"> <!--использованы те же классы, что и в catalogue.html -->
             <li class="products-item"> <!-- 1 -->
                 <figure class="products-about"> <!-- см. внизу п.4-->
-                <img src="img/perforator-1.jpg" alt="Перфоратор BOSCH BFG 9000">
+                <img src="img/perforator-3.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 9000">
                 <figcaption class="products-name">Перфоратор BOSCH BFG 9000</figcaption>
               </figure>
               <del class="products-price-old">32500 P.</del>
@@ -95,7 +95,7 @@
             </li>
             <li class="products-item"> <!-- 2 -->
                 <figure class="products-about">
-                <img src="img/perforator-2.jpg" alt="Перфоратор BOSCH BFG 3000">
+                <img src="img/perforator-1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
                 <figcaption class="products-name">Перфоратор BOSCH BFG 3000</figcaption>
               </figure>
               <del class="products-price-old">22500 P.</del>
@@ -103,7 +103,7 @@
             </li>
             <li class="products-item"> <!-- 3 -->
                 <figure class="products-about">
-                <img src="img/perforator-3.jpg" alt="Перфоратор BOSCH BFG 6000">
+                <img src="img/perforator-2.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
                 <figcaption class="products-name">Перфоратор BOSCH BFG 6000</figcaption>
               </figure>
               <del class="products-price-old">30500 P.</del>
@@ -111,27 +111,43 @@
             </li>
             <li class="products-item"> <!-- 4 -->
                 <figure class="products-about">
-                <img src="img/perforator-4.jpg" alt="Перфоратор BOSCH BFG 2000">
+                <img src="img/perforator-1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
                 <figcaption class="products-name">Перфоратор BOSCH BFG 2000</figcaption>
               </figure>
               <p class="products-price-new">12500 P.</p>
             </li>
           </ul>
       </section>
-      <section class="brands">
+      <section class="vendors">
         <div class="section-header"><!--у двух элементов общее пространство и фон -->
           <h2 class="section-header-h2">Популярные производители</h2>
           <a class="button section-header-a">Все производители</a>
         </div>
-        <ul class="brands-list">
-          <li class="brands-list-item vendors-bosch"></li> <!--изобажение вставляется как фон? -->
-          <li class="brands-list-item vendors-makita"></li>
-          <li class="brands-list-item vendors-dewalt"></li>
-          <li class="brands-list-item vendors-interskol"></li>
-          <li class="brands-list-item vendors-hitachi"></li>
-          <li class="brands-list-item vendors-lg"></li>
-          <li class="brands-list-item vendors-aeg"></li>
-          <li class="brands-list-item vendors-metabo"></li>
+        <ul class="vendors-list">
+          <li class="vendors-item vendors-bosch">
+            <img src="img/vendors-bosch.jpg" width="123" height="40" alt="Брэнд Бош">
+          </li>
+          <li class="vendors-item vendors-makita">
+            <img src="img/vendors-makita.jpg" width="123" height="40" alt="Брэнд Макита">
+          </li>
+          <li class="vendors-item vendors-dewalt">
+            <img src="img/vendors-dewalt.jpg" width="123" height="40" alt="Брэнд Девольт">
+          </li>
+          <li class="vendors-item vendors-interskol">
+            <img src="img/vendors-interskol.jpg" width="123" height="40" alt="Брэнд Интерскол">
+          </li>
+          <li class="vendors-item vendors-hitachi">
+            <img src="img/vendors-hitachi.jpg" width="123" height="40" alt="Брэнд Хитачи">
+          </li>
+          <li class="vendors-item vendors-lg">
+            <img src="img/vendors-lg.jpg" width="123" height="40" alt="Брэнд Элджи">
+          </li>
+          <li class="vendors-item vendors-aeg">
+            <img src="img/vendors-aeg.jpg" width="123" height="40" alt="Брэнд Аег">
+          </li>
+          <li class="vendors-item vendors-metabo">
+            <img src="img/vendors-metabo.jpg" width="123" height="40" alt="Брэнд Метабо">
+          </li>
         </ul>
       </section>
       <section class="services">
@@ -170,7 +186,7 @@
             </p>
             <a class="button services-credit-a">Отправить заявку</a>
           </div>
-      </div>
+        </div>
       </section>
       <section class="about">
         <h2> Компания "Техномарт"</h2>
@@ -201,9 +217,7 @@
     <footer class="main-footer">
       <div class="footer-top">
         <div class="container"> <!--центровщик-->
-          <a class="footer-logo">
-            <img src="img/logo.png" alt="Логотип Техномарт">
-          </a>
+          <a class="footer-logo"></a><!--логотип здесь вставим фоном-->
           <ul class="footer-company">
             <li><a href="#">Компания</a></li>
             <li><a href="#">Новости</a></li>
@@ -271,9 +285,7 @@
   </body>
 </html>
 <!--
-по графике:
-логотипы брэндов, наверное, вставлять как фон?
-
+0. если в футере логотип вставляется фоном, тогда и сылку, наверное не нужно? а логотип (сама надпись) одинаковый в хедере и футере. наверное, можно обойтись одним файлом?
 1. не слишком ли длинные названия классов?
 2. заголовкам всем придется присваивать классы?
 можно их так и назвать: h2, h2? у всех заголовков h1 будет общий класс h1; у h2, h3 тоже;
@@ -285,4 +297,5 @@
 6. во всех формах атрибут action="https://echo.htmlacademy.ru". так нормально?
 7. input-у тоже, наверное, класс нужно присвоить?
 8. формы авторизации в этом макете нет
+9. есть ли разница: в двух местах загружать один и тот же файл или два разных (логотип, например)? это влияет на скорость загрузки страницы?
  -->
