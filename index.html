@@ -13,8 +13,9 @@
           <a class="header-logo"> <!-- href не указываю т.к. это главная стр  -->
             <img src="img/logo-technomart.svg" alt="Логотип Техномарт"><!--как указывать размеры для svg?-->
           </a>
-          <form class="header-search" action="https://echo.htmlacademy.ru" method="get">
+          <form class="header-search" action="https://echo.htmlacademy.ru" method="post">
             <label>Поиск: <input type="text" name="search"></label>
+            <button class="header-search-button" type="submit"><span class="visually-hidden">Найти</span></button> <!--лупа-->
           </form>
           <ul>
             <li><a class="header-bookmarks" href="#">Закладки: 0</a></li>
@@ -48,10 +49,10 @@
         </div> <!--container-->
       </div><!--header-bottom -->
     </header>
-    <main class="container"> <!--Центровщик -->
+    <main>
       <h1 class="visually-hidden">Техномарт. Интернет-магазин строительных материалов и инструментов для ремонта</h1>
       <!--  -->
-      <section class="best-offer">
+      <section class="best-offer container">
         <h2 class="visually-hidden">Лучшие предложения</h2>
         <div class="best-offer-slideshow">
           <h3 class="best-offer-slideshow-h3">Дрели</h3>
@@ -60,6 +61,8 @@
           <h3 class="best-offer-slideshow-h3">Перфораторы</h3>
           <p class="best-offer-slideshow-p">Настоящие мужские игрушки</p>
           <img src="img/best-offer-slider-1.jpg" width="620" height="266" alt="Перфораторы">
+          <button class="best-offer-slideshow-back" type="button"><span class="visually-hidden">Назад</span></button>
+          <button class="best-offer-slideshow-next" type="button"><span class="visually-hidden">Вперед</span></button>
           <a class="button best-offer-a" href="#">Открыть каталог</a>
         </div>
         <div class="best-offer-blocks best-offer-materials products-new"> <!--для наклейки new использован тот же класс, что и в catalogue.html -->
@@ -83,7 +86,7 @@
           <a class="button best-offer-a" href="#">бесплатно</a>
         </div>
       </section>
-      <section class="popular">
+      <section class="popular container">
         <div class="section-header"><!--у двух элементов общее пространство и фон -->
           <h2 class="section-header-h2">Популярные товары</h2>
           <a class="button section-header-a">Все популярные товары</a>
@@ -122,7 +125,7 @@
             </li>
           </ul>
       </section>
-      <section class="vendors">
+      <section class="vendors container">
         <div class="section-header"><!--у двух элементов общее пространство и фон -->
           <h2 class="section-header-h2">Популярные производители</h2>
           <a class="button section-header-a">Все производители</a>
@@ -188,35 +191,37 @@
               Залезть в долговую яму стало проще! <br>
               Кредитные консультанты придут вам на помощь.
             </p>
+            <a class="button services-credit-a">Отправить заявку</a>
           </div>
-          <a class="button services-credit-a">Отправить заявку</a>
-        </div>
+        </div> <!--центровщик-->
       </section>
-      <section class="about">
-        <h2> Компания "Техномарт"</h2>
-        <p>
-          Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах
-        </p>
-        <p>
-          Мы можем доставить ваш товар в самые отдаленные точки России! <br>
-          Техномарт работает со многими транспортными компаниями:
-        </p>
-        <ul class="about-transport">
-          <li>Деловые линии</li>
-          <li>Автотрейдинг</li>
-          <li>ЖелДорЭкспедиция</li>
-        </ul>
-        <a class="button about-more" href="#">Подробнее о компании</a>
-      </section>
-      <section class="contacts">
-        <h2>Контакты</h2>
-        <p>Вы можете забрать товар сами, заехав в наш офис</p>
-          <a class="contacts-map" href="#">
-            <img src="img/map-small.jpg" width="300" height="158" alt="Карта"> <!--описание нужно получше придумать -->
-          </a>
-        <!--по клику на этой области должно вызываться модальное окно с большой картой -->
-        <a class="button contacts-write" href="#">Заблудились? Напишите нам!</a>
-      </section>
+      <div class="container"> <!--центровщик-->
+        <section class="about">
+          <h2> Компания "Техномарт"</h2>
+          <p>
+            Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах
+          </p>
+          <p>
+            Мы можем доставить ваш товар в самые отдаленные точки России! <br>
+            Техномарт работает со многими транспортными компаниями:
+          </p>
+          <ul class="about-transport">
+            <li>Деловые линии</li>
+            <li>Автотрейдинг</li>
+            <li>ЖелДорЭкспедиция</li>
+          </ul>
+          <a class="button about-more" href="#">Подробнее о компании</a>
+        </section>
+        <section class="contacts">
+          <h2>Контакты</h2>
+          <p>Вы можете забрать товар сами, заехав в наш офис</p>
+            <a class="contacts-map" href="#">
+              <img src="img/map-small.jpg" width="300" height="158" alt="Карта"> <!--описание нужно получше придумать -->
+            </a>
+          <!--по клику на этой области должно вызываться модальное окно с большой картой -->
+          <a class="button contacts-write" href="#">Заблудились? Напишите нам!</a>
+        </section>
+      </div> <!--центровщик-->
     </main>
     <footer class="main-footer">
       <div class="footer-top">
@@ -260,15 +265,15 @@
     <section class="modal modal-feedback">
       <h2 class="visually-hidden">Обратная свзяь</h2>
       <form class="modal-feedback-form" action="https://echo.htmlacademy.ru" method="post">
-        <label>
+        <label class="modal-feedback-name">
           Ваше имя:<br>
           <input type="text" name="name" value="" placeholder="Имя Фамилия">
         </label>
-        <label>
+        <label class="modal-feedback-email">
           Ваш e-mail:<br>
           <input type="email" name="email" value="" placeholder="email@example.com">
         </label>
-        <label>
+        <label class="modal-feedback-letter">
           Текст письма:
           <textarea name="letter" placeholder="В свободной форме">
           </textarea>
