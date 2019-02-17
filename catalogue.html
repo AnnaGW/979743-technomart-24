@@ -13,8 +13,9 @@
           <a class="header-logo" href="index.html">
             <img src="img/logo-technomart.svg" alt="Логотип Техномарт">
           </a>
-          <label for="search">Поиск:</label>
-          <input id="search">
+          <form class="header-search" action="https://echo.htmlacademy.ru" method="get">
+            <label>Поиск: <input type="text" name="search"></label>
+          </form>
           <ul>
             <li><a class="header-bookmarks" href="#">Закладки: 0</a></li>
             <li><a class="header-cart" href="#">Корзина: 0</a></li>
@@ -61,14 +62,18 @@
       </nav>
       <section class="products">
         <h2 class="products-h2">ПЕРФОРАТОРЫ</h2>
-        <div class="filters">
+        <div class="products-filters">
           <h3>Фильтр</h3>
-          <form class="filter" method="get" action="https://echo.htmlacademy.ru">
-            <fieldset>
+          <form class="products-filter-form" method="post" action="https://echo.htmlacademy.ru"> <!--oninput попозже пропишу -->
+            <fieldset class="products-filters-price">
               <legend>Цена:</legend>
-
+              <input type="range" id="price-min" name="price-min" min="0" max="50000">
+              <input type="range" id="price-max" name="price-max" min="0" max="50000">
+              <!--за счет стилей наложим их др на др. как сделать их доступными - не знаю -->
+              <output name="price-min">0</output>
+              <output name="price-max">30000</output>
             </fieldset>
-            <fieldset>
+            <fieldset class="products-filters-vendors">
               <legend>Производители:</legend>
               <ul>
                 <li class="filter-option">
@@ -103,7 +108,7 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset>
+            <fieldset class="products-filters-power">
               <legend>Питание:</legend>
               <ul>
                 <li class="filter-option">
@@ -120,16 +125,21 @@
                 </li>
               </ul>
             </fieldset>
-            <button class="button filter-button" type="submit">
+            <button class="button products-filter-button" type="submit">
               Показать
             </button>
           </form>
         </div>
-
-        <div class="sorting">
-
+        <div class="products-sorting">
+          <h3>Сортировка</h3>
+          <ul class="products-sorting-list">
+            <li><a class="products-sorting-item">по цене</a></li> <!--я не уверена, что спискорм ссылок надо размечать, куда ссылки ведут? -->
+            <li><a class="products-sorting-item">по типу</a></li>
+            <li><a class="products-sorting-item">по функционалу</a></li>
+            <li><a class="products-sorting-dir-up"></a></li>
+            <li><a class="products-sorting-dir-down"></a></li>
+          </ul>
         </div>
-
         <ul class="products-list">
           <li class="products-item"> <!-- 1 -->
             <a class="button products-buy" href="#">Купить</a>
@@ -222,7 +232,12 @@
             <p class="products-price-new">12500 P.</p>
           </li>
         </ul>
-        <!--блок с перебором страниц-->
+        <ul class="products-pagination-list">
+          <li class="products-pagination-item products-pagination-item-current"><a>1</a></li> <!--текущая страница-->
+          <li class="products-pagination-item"><a href="#">2</a></li>
+          <li class="products-pagination-item"><a href="#">3</a></li>
+          <li class="products-pagination-item"><a href="#">Следующая</a></li>
+        </ul>
       </section>
       <section class="description">
         <h2>ПАРА СЛОВ О ПЕРФОРАТОРАХ</h2>

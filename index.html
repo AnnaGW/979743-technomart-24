@@ -13,8 +13,9 @@
           <a class="header-logo"> <!-- href не указываю т.к. это главная стр  -->
             <img src="img/logo-technomart.svg" alt="Логотип Техномарт"><!--как указывать размеры для svg?-->
           </a>
-          <label for="search">Поиск:</label>
-          <input id="search">
+          <form class="header-search" action="https://echo.htmlacademy.ru" method="get">
+            <label>Поиск: <input type="text" name="search"></label>
+          </form>
           <ul>
             <li><a class="header-bookmarks" href="#">Закладки: 0</a></li>
             <li><a class="header-cart" href="#">Корзина: 0</a></li>
@@ -52,9 +53,12 @@
       <!--  -->
       <section class="best-offer">
         <h2 class="visually-hidden">Лучшие предложения</h2>
-        <div class="best-offer-slideshow"> <!-- см. внизу п.1-->
-          <h3></h3> <!-- надо ли заголовок?-->
+        <div class="best-offer-slideshow">
+          <h3 class="best-offer-slideshow-h3">Дрели</h3>
+          <p class="best-offer-slideshow-p">Соседям на радость!</p>
           <img src="img/best-offer-slider-2.jpg" width="620" height="266" alt="Дрели">
+          <h3 class="best-offer-slideshow-h3">Перфораторы</h3>
+          <p class="best-offer-slideshow-p">Настоящие мужские игрушки</p>
           <img src="img/best-offer-slider-1.jpg" width="620" height="266" alt="Перфораторы">
           <a class="button best-offer-a" href="#">Открыть каталог</a>
         </div>
@@ -124,7 +128,7 @@
           <a class="button section-header-a">Все производители</a>
         </div>
         <ul class="vendors-list">
-          <li class="vendors-item vendors-bosch">
+          <li class="vendors-item vendors-bosch"> <!--если изображение контентное, тогда надо ли второй класс присваивать? -->
             <img src="img/vendors-bosch.jpg" width="123" height="40" alt="Брэнд Бош">
           </li>
           <li class="vendors-item vendors-makita">
@@ -184,8 +188,8 @@
               Залезть в долговую яму стало проще! <br>
               Кредитные консультанты придут вам на помощь.
             </p>
-            <a class="button services-credit-a">Отправить заявку</a>
           </div>
+          <a class="button services-credit-a">Отправить заявку</a>
         </div>
       </section>
       <section class="about">
@@ -202,7 +206,7 @@
           <li>Автотрейдинг</li>
           <li>ЖелДорЭкспедиция</li>
         </ul>
-        <a class="button about-more" href="#">Подробнее о компании</a> <!--второй класс (about-more), возм, и не нужен -->
+        <a class="button about-more" href="#">Подробнее о компании</a>
       </section>
       <section class="contacts">
         <h2>Контакты</h2>
@@ -290,9 +294,9 @@
 2. заголовкам всем придется присваивать классы?
 можно их так и назвать: h2, h2? у всех заголовков h1 будет общий класс h1; у h2, h3 тоже;
 3. стили заголовков и параграфов в разных блоках могут отличаться; нужно им присваивать классы;
-допускается именовать класс имя-блока-h3, например?
+допускается именовать класс имя-блока-h3, например? или допустимо задавать стили заголовков .class_name h2 { }? это не считается переопределением глобальных тегов?
 4. в списке товаров в разделе "популярные товары" из макета не понятно: является ли элемент списка
-ссылкой на страницу каталога/товара; это было бы логично; я бы и кнопки "купить" и "в закладки" тоже оставила;
+ссылкой на страницу каталога/товара; это было бы логично; я бы и кнопки "купить" и "в закладки" тоже оставила, как в странице каталога;
 5. модальное окно "Обратная связь". я изменила название класса на более подходящий.
 6. во всех формах атрибут action="https://echo.htmlacademy.ru". так нормально?
 7. input-у тоже, наверное, класс нужно присвоить?
