@@ -6,16 +6,15 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>  <!--  -->
+  <body>
     <header class="main-header">
-      <div class="header-top"> <!--темно синий фон во всю ширину окна браузера -->
-        <div class="container"> <!--центровщик-->
-          <a class="header-logo"> <!-- href не указываю т.к. это главная стр  -->
-            <img src="img/logo-technomart.svg" alt="Логотип Техномарт"><!--как указывать размеры для svg?-->
+      <div class="header-top">
+        <div class="container">
+          <a class="header-logo">
+            <img src="img/logo-technomart.svg" width="137" height="22" alt="Логотип Техномарт">
           </a>
           <form class="header-search" action="https://echo.htmlacademy.ru" method="get">
-            <label>Поиск: <input type="text" name="search"></label>
-            <button class="header-search-button" type="submit"><span class="visually-hidden">Найти</span></button> <!--лупа-->
+            <label>Поиск: <input type="search" name="search"></label>
           </form>
           <ul>
             <li><a class="header-bookmarks" href="#">Закладки: 0</a></li>
@@ -24,10 +23,10 @@
           </ul>
         </div> <!--container -->
       </div><!--header-top -->
-      <div class="header-bottom"> <!-- серый фон во всю ширину окна браузера -->
-        <div class="container"> <!--центровщик-->
+      <div class="header-bottom">
+        <div class="container">
           <p class="header-description">Интернет-магазин строительных материалов и инструментов для ремонта</p>
-          <div class="header-info"> <!--обертка для размещения тел и адреса по центру-->
+          <div class="header-info">
             <a class="header-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
             <p class="header-address">г. Санкт-Петербург, Б.Конюшенная, д. 19/8</p>
           </div> <!--header-info -->
@@ -51,55 +50,57 @@
     </header>
     <main>
       <h1 class="visually-hidden">Техномарт. Интернет-магазин строительных материалов и инструментов для ремонта</h1>
-      <!--  -->
-      <section class="best-offer container">
+      <section class="promo container">
         <h2 class="visually-hidden">Лучшие предложения</h2>
-        <ul class="best-offer-slideshow">
+        <ul class="promo-slideshow">
           <li>
-            <h3 class="best-offer-slideshow-heading">Дрели</h3>
-            <p class="best-offer-slideshow-description">Соседям на радость!</p>
-            <a href="#"><img src="img/best-offer-slider-2.jpg" width="620" height="266" alt="Дрели"></a>
+            <h3 class="promo-heading">Дрели</h3>
+            <p class="promo-description">Соседям на радость!</p>
+            <img src="img/promo-slider-2.jpg" width="620" height="266" alt="Дрели">
+            <a class="button promo-link" href="catalogue.html">Открыть каталог</a>
           </li>
           <li>
-            <h3 class="best-offer-slideshow-heading">Перфораторы</h3>
-            <p class="best-offer-slideshow-description">Настоящие мужские игрушки</p>
-            <a href="#"><img src="img/best-offer-slider-1.jpg" width="620" height="266" alt="Перфораторы"></a>
+            <h3 class="promo-heading">Перфораторы</h3>
+            <p class="promo-description">Настоящие мужские игрушки</p>
+            <img src="img/promo-slider-1.jpg" width="620" height="266" alt="Перфораторы">
+            <a class="button promo-slider-link" href="catalogue.html">Открыть каталог</a><!--класс .promo-link исп-ся для ссылок в след блоках-->
           </li>
         </ul>
-        <button class="best-offer-slideshow-back" type="button"><span class="visually-hidden">Назад</span></button>
-        <button class="best-offer-slideshow-next" type="button"><span class="visually-hidden">Вперед</span></button>
-        <a class="button best-offer-a" href="#">Открыть каталог</a>
-        <div class="best-offer-blocks best-offer-materials products-new"> <!--для наклейки new использован тот же класс, что и в catalogue.html -->
-          <h3 class="best-offer-heading">Материалы</h3><!--по поводу наименования класса см. внизу п.4-->
-          <a class="button best-offer-link" href="#">на любой вкус</a> <!--этот элемент ссылка, п.ч. он скорее всего переводит в соответствующий раздел каталога -->
-        </div>
-        <div class="best-offer-blocks best-offer-tool">
-          <h3 class="best-offer-heading">Инструмент</h3>
-          <a class="button best-offer-link" href="#">на все случаи</a>
-        </div>
-        <div class="best-offer-blocks best-offer-equipment">
-          <h3 class="best-offer-heading">Техника</h3>
-          <a class="button best-offer-link" href="#">для стройки</a>
-        </div>
-        <div class="best-offer-blocks best-offer-discount">
-          <h3 class="best-offer-heading">Скидки 50%</h3>
-          <a class="button best-offer-link" href="#">на 350 товаров</a>
-        </div>
-        <div class="best-offer-blocks best-offer-delivery">
-          <h3 class="best-offer-heading">Доставка</h3>
-          <a class="button best-offer-link" href="#">бесплатно</a>
-        </div>
+        <button class="promo-back" type="button"><span class="visually-hidden">Назад</span></button>
+        <button class="promo-forward" type="button"><span class="visually-hidden">Вперед</span></button>
+        <ul><!--нужен ли общий класс - пока не знаю-->
+          <li class="promo-block promo-materials new-tip">
+            <h3 class="promo-heading">Материалы</h3>
+            <a class="button promo-link" href="#">На любой вкус</a>
+          </li>
+          <li class="promo-block promo-tool">
+            <h3 class="promo-heading">Инструмент</h3>
+            <a class="button promo-link" href="#">На все случаи</a>
+          </li>
+          <li class="promo-block promo-equipment">
+            <h3 class="promo-heading">Техника</h3>
+            <a class="button promo-link" href="#">Для стройки</a>
+          </li>
+          <li class="promo-block promo-discount">
+            <h3 class="promo-heading">Скидки 50%</h3>
+            <a class="button promo-link" href="#">На 350 товаров</a>
+          </li>
+          <li class="promo-block promo-delivery">
+            <h3 class="promo-heading">Доставка</h3>
+            <a class="button promo-link" href="#">Бесплатно</a>
+          </li>
+        </ul>
       </section>
       <section class="popular container">
-        <div class="section-header"><!--у двух элементов общее пространство и фон -->
-          <h2 class="section-header-h2">Популярные товары</h2>
-          <a class="button section-header-a">Все популярные товары</a>
+        <div class="section-header">
+          <h2 class="section-header-heading">Популярные товары</h2>
+          <a class="button section-header-link">Все популярные товары</a>
         </div>
-          <ul class="products-list"> <!--использованы те же классы, что и в catalogue.html -->
+          <ul class="products-list">
             <li class="products-item"> <!-- 1 -->
               <a class="button products-buy" href="#">Купить</a>
               <a class="button products-inbookmarks" href="#">В закладки</a>
-              <figure class="products-about"> <!-- см. внизу п.4-->
+              <figure class="products-about">
                 <img src="img/perforator-3.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 9000">
                 <figcaption class="products-name">Перфоратор BOSCH BFG 9000</figcaption>
               </figure>
@@ -126,7 +127,7 @@
               <del class="products-price-old">30500 P.</del>
               <p class="products-price-new">25500 P.</p>
             </li>
-            <li class="products-item"> <!-- 4 -->
+            <li class="products-item new-tip"> <!-- 4 -->
               <a class="button products-buy" href="#">Купить</a>
               <a class="button products-inbookmarks" href="#">В закладки</a>
               <figure class="products-about">
@@ -138,9 +139,9 @@
           </ul>
       </section>
       <section class="vendors container">
-        <div class="section-header"><!--у двух элементов общее пространство и фон -->
-          <h2 class="section-header-h2">Популярные производители</h2>
-          <a class="button section-header-a">Все производители</a>
+        <div class="section-header">
+          <h2 class="section-header-heading">Популярные производители</h2>
+          <a class="button section-header-link">Все производители</a>
         </div>
         <ul class="vendors-list">
           <li class="vendors-item vendors-bosch"> <!--если изображение контентное, тогда надо ли второй класс присваивать? -->
@@ -170,44 +171,42 @@
         </ul>
       </section>
       <section class="services">
-        <div class="container"> <!--центровщик-->
-          <h2 class="services-h2">Сервисы</h2>
-          <p>
+        <div class="container">
+          <h2 class="services-heading">Сервисы</h2>
+          <p class="services-description">
             Хороший интернет-магазин отличается от плохого не только ценами! <br>
             Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
           </p>
-          <div class="services-menu">
-            <ul class="services-menu-list">
-              <li class="services-menu-item">Доставка</li>
-              <li class="services-menu-item">Гарантия</li>
-              <li class="services-menu-item">Кредит</li>
-            </ul>
-          </div>
-          <div class="services-delivery">
-            <h3 class="services-h3">Доставка</h3>
-            <p class="services-p">
+          <ul class="services-menu">
+            <li class="services-menu-item">Доставка</li>
+            <li class="services-menu-item">Гарантия</li>
+            <li class="services-menu-item">Кредит</li>
+          </ul>
+          <div class="services-detail services-delivery">
+            <h3 class="services-subtitle">Доставка</h3>
+            <p class="services-specification">
               Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! <br>
               Ведь мы неплохо заработаем, поднимая его на ваш этаж!
             </p>
           </div>
-          <div class="services-warranty">
-            <h3 class="services-h3">Гарантия</h3>
-            <p class="services-p">
+          <div class="services-detail services-warranty">
+            <h3 class="services-subtitle">Гарантия</h3>
+            <p  class="services-specification">
               Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгаранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. <br>
               Дом уж восстановите как-нибудь сами.
             </p>
           </div>
-          <div class="services-credit">
-            <h3 class="services-h3">Кредит</h3>
-            <p class="services-p">
+          <div class="services-detail services-credit">
+            <h3 class="services-subtitle">Кредит</h3>
+            <p class="services-specification">
               Залезть в долговую яму стало проще! <br>
               Кредитные консультанты придут вам на помощь.
             </p>
-            <a class="button services-credit-a">Отправить заявку</a>
+            <a class="button services-button">Отправить заявку</a>
           </div>
-        </div> <!--центровщик-->
+        </div>
       </section>
-      <div class="container"> <!--центровщик-->
+      <div class="container">
         <section class="about">
           <h2> Компания "Техномарт"</h2>
           <p>
@@ -230,15 +229,14 @@
             <a class="contacts-map" href="#">
               <img src="img/map-small.jpg" width="300" height="158" alt="Карта"> <!--описание нужно получше придумать -->
             </a>
-          <!--по клику на этой области должно вызываться модальное окно с большой картой -->
           <a class="button contacts-write" href="#">Заблудились? Напишите нам!</a>
         </section>
-      </div> <!--центровщик-->
+      </div>
     </main>
     <footer class="main-footer">
       <div class="footer-top">
-        <div class="container"> <!--центровщик-->
-          <a class="footer-logo"></a><!--логотип здесь вставим фоном-->
+        <div class="container">
+          <a class="footer-logo"></a>
           <ul class="footer-company">
             <li><a href="#">Компания</a></li>
             <li><a href="#">Новости</a></li>
@@ -258,7 +256,7 @@
         </div> <!--container -->
       </div> <!-- footer-top-->
       <div class="footer-bottom">
-        <div class="container"> <!--центровщик-->
+        <div class="container">
           <p>&copy; 2010-2019 Компания "Техномарт" <br>Все права защищены</p>
           <ul>
             <li><a class="footer-social footer-vk" href="#"><span class="visually-hidden">Вконтакте</span></a></li>
@@ -279,44 +277,32 @@
       <form class="modal-feedback-form" action="https://echo.htmlacademy.ru" method="post">
         <label class="modal-feedback-name">
           Ваше имя:<br>
-          <input type="text" name="name" value="" placeholder="Имя Фамилия">
+          <input class="modal-feedback-field" type="text" name="name" value="" placeholder="Имя Фамилия">
         </label>
         <label class="modal-feedback-email">
           Ваш e-mail:<br>
-          <input type="email" name="email" value="" placeholder="email@example.com">
+          <input class="modal-feedback-field" type="email" name="email" value="" placeholder="email@example.com">
         </label>
         <label class="modal-feedback-letter">
           Текст письма:
-          <textarea name="letter" placeholder="В свободной форме">
+          <textarea class="modal-feedback-field" name="letter" placeholder="В свободной форме">
           </textarea>
         </label>
         <button class="button modal-feedback-form-button" type="submit">Отправить</button>
       </form>
       <button class="modal-close js-modal-close" type="button">
-        <span class="visually-hidden">закрыть</span>
+        <span class="visually-hidden">Закрыть</span>
       </button>
     </section>
     <section class="modal modal-map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
       <img src="img/map-big.jpg" width="941" height="440" alt="Офис компании по адресу ул. Большая Конюшенная 19, Санкт-Петербург">
       <button class="modal-close js-modal-close" type="button">
-        <span class="visually-hidden">закрыть</span>
+        <span class="visually-hidden">Закрыть</span>
       </button>
-     </section>
+    </section>
   </body>
 </html>
 <!--
-0. если в футере логотип вставляется фоном, тогда и сылку, наверное не нужно? а логотип (сама надпись) одинаковый в хедере и футере. наверное, можно обойтись одним файлом?
-1. не слишком ли длинные названия классов?
-2. заголовкам всем придется присваивать классы?
-можно их так и назвать: h2, h2? у всех заголовков h1 будет общий класс h1; у h2, h3 тоже;
-3. стили заголовков и параграфов в разных блоках могут отличаться; нужно им присваивать классы;
-допускается именовать класс имя-блока-h3, например? или допустимо задавать стили заголовков .class_name h2 { }? это не считается переопределением глобальных тегов?
-4. в списке товаров в разделе "популярные товары" из макета не понятно: является ли элемент списка
-ссылкой на страницу каталога/товара; это было бы логично; я бы и кнопки "купить" и "в закладки" тоже оставила, как в странице каталога;
-5. модальное окно "Обратная связь". я изменила название класса на более подходящий.
-6. во всех формах атрибут action="https://echo.htmlacademy.ru". так нормально?
-7. input-у тоже, наверное, класс нужно присвоить?
-8. формы авторизации в этом макете нет
-9. есть ли разница: в двух местах загружать один и тот же файл или два разных (логотип, например)? это влияет на скорость загрузки страницы?
+если в футере логотип вставляется фоном, тогда и cсылку, наверное не нужно? а логотип (сама надпись) одинаковый в хедере и футере. наверное, можно обойтись одним файлом?
  -->
