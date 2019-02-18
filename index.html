@@ -13,7 +13,7 @@
           <a class="header-logo"> <!-- href не указываю т.к. это главная стр  -->
             <img src="img/logo-technomart.svg" alt="Логотип Техномарт"><!--как указывать размеры для svg?-->
           </a>
-          <form class="header-search" action="https://echo.htmlacademy.ru" method="post">
+          <form class="header-search" action="https://echo.htmlacademy.ru" method="get">
             <label>Поиск: <input type="text" name="search"></label>
             <button class="header-search-button" type="submit"><span class="visually-hidden">Найти</span></button> <!--лупа-->
           </form>
@@ -54,36 +54,40 @@
       <!--  -->
       <section class="best-offer container">
         <h2 class="visually-hidden">Лучшие предложения</h2>
-        <div class="best-offer-slideshow">
-          <h3 class="best-offer-slideshow-h3">Дрели</h3>
-          <p class="best-offer-slideshow-p">Соседям на радость!</p>
-          <img src="img/best-offer-slider-2.jpg" width="620" height="266" alt="Дрели">
-          <h3 class="best-offer-slideshow-h3">Перфораторы</h3>
-          <p class="best-offer-slideshow-p">Настоящие мужские игрушки</p>
-          <img src="img/best-offer-slider-1.jpg" width="620" height="266" alt="Перфораторы">
-          <button class="best-offer-slideshow-back" type="button"><span class="visually-hidden">Назад</span></button>
-          <button class="best-offer-slideshow-next" type="button"><span class="visually-hidden">Вперед</span></button>
-          <a class="button best-offer-a" href="#">Открыть каталог</a>
-        </div>
+        <ul class="best-offer-slideshow">
+          <li>
+            <h3 class="best-offer-slideshow-heading">Дрели</h3>
+            <p class="best-offer-slideshow-description">Соседям на радость!</p>
+            <a href="#"><img src="img/best-offer-slider-2.jpg" width="620" height="266" alt="Дрели"></a>
+          </li>
+          <li>
+            <h3 class="best-offer-slideshow-heading">Перфораторы</h3>
+            <p class="best-offer-slideshow-description">Настоящие мужские игрушки</p>
+            <a href="#"><img src="img/best-offer-slider-1.jpg" width="620" height="266" alt="Перфораторы"></a>
+          </li>
+        </ul>
+        <button class="best-offer-slideshow-back" type="button"><span class="visually-hidden">Назад</span></button>
+        <button class="best-offer-slideshow-next" type="button"><span class="visually-hidden">Вперед</span></button>
+        <a class="button best-offer-a" href="#">Открыть каталог</a>
         <div class="best-offer-blocks best-offer-materials products-new"> <!--для наклейки new использован тот же класс, что и в catalogue.html -->
-          <h3 class="best-offer-h3">Материалы</h3><!--по поводу наименования класса см. внизу п.4-->
-          <a class="button best-offer-a" href="#">на любой вкус</a> <!--этот элемент ссылка, п.ч. он скорее всего переводит в соответствующий раздел каталога -->
+          <h3 class="best-offer-heading">Материалы</h3><!--по поводу наименования класса см. внизу п.4-->
+          <a class="button best-offer-link" href="#">на любой вкус</a> <!--этот элемент ссылка, п.ч. он скорее всего переводит в соответствующий раздел каталога -->
         </div>
         <div class="best-offer-blocks best-offer-tool">
-          <h3 class="best-offer-h3">Инструмент</h3>
-          <a class="button best-offer-a" href="#">на все случаи</a>
+          <h3 class="best-offer-heading">Инструмент</h3>
+          <a class="button best-offer-link" href="#">на все случаи</a>
         </div>
         <div class="best-offer-blocks best-offer-equipment">
-          <h3 class="best-offer-h3">Техника</h3>
-          <a class="button best-offer-a" href="#">для стройки</a>
+          <h3 class="best-offer-heading">Техника</h3>
+          <a class="button best-offer-link" href="#">для стройки</a>
         </div>
         <div class="best-offer-blocks best-offer-discount">
-          <h3 class="best-offer-h3">Скидки 50%</h3>
-          <a class="button best-offer-a" href="#">на 350 товаров</a>
+          <h3 class="best-offer-heading">Скидки 50%</h3>
+          <a class="button best-offer-link" href="#">на 350 товаров</a>
         </div>
         <div class="best-offer-blocks best-offer-delivery">
-          <h3 class="best-offer-h3">Доставка</h3>
-          <a class="button best-offer-a" href="#">бесплатно</a>
+          <h3 class="best-offer-heading">Доставка</h3>
+          <a class="button best-offer-link" href="#">бесплатно</a>
         </div>
       </section>
       <section class="popular container">
@@ -93,7 +97,9 @@
         </div>
           <ul class="products-list"> <!--использованы те же классы, что и в catalogue.html -->
             <li class="products-item"> <!-- 1 -->
-                <figure class="products-about"> <!-- см. внизу п.4-->
+              <a class="button products-buy" href="#">Купить</a>
+              <a class="button products-inbookmarks" href="#">В закладки</a>
+              <figure class="products-about"> <!-- см. внизу п.4-->
                 <img src="img/perforator-3.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 9000">
                 <figcaption class="products-name">Перфоратор BOSCH BFG 9000</figcaption>
               </figure>
@@ -101,7 +107,9 @@
               <p class="products-price-new">25500 P.</p>
             </li>
             <li class="products-item"> <!-- 2 -->
-                <figure class="products-about">
+              <a class="button products-buy" href="#">Купить</a>
+              <a class="button products-inbookmarks" href="#">В закладки</a>
+              <figure class="products-about">
                 <img src="img/perforator-1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
                 <figcaption class="products-name">Перфоратор BOSCH BFG 3000</figcaption>
               </figure>
@@ -109,7 +117,9 @@
               <p class="products-price-new">15500 P.</p>
             </li>
             <li class="products-item"> <!-- 3 -->
-                <figure class="products-about">
+              <a class="button products-buy" href="#">Купить</a>
+              <a class="button products-inbookmarks" href="#">В закладки</a>
+              <figure class="products-about">
                 <img src="img/perforator-2.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
                 <figcaption class="products-name">Перфоратор BOSCH BFG 6000</figcaption>
               </figure>
@@ -117,7 +127,9 @@
               <p class="products-price-new">25500 P.</p>
             </li>
             <li class="products-item"> <!-- 4 -->
-                <figure class="products-about">
+              <a class="button products-buy" href="#">Купить</a>
+              <a class="button products-inbookmarks" href="#">В закладки</a>
+              <figure class="products-about">
                 <img src="img/perforator-1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
                 <figcaption class="products-name">Перфоратор BOSCH BFG 2000</figcaption>
               </figure>

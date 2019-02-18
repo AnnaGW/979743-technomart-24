@@ -13,7 +13,7 @@
           <a class="header-logo" href="index.html">
             <img src="img/logo-technomart.svg" alt="Логотип Техномарт">
           </a>
-          <form class="header-search" action="https://echo.htmlacademy.ru" method="post"> <!--post или get - не знаю-->
+          <form class="header-search" action="https://echo.htmlacademy.ru" method="get">
             <label>Поиск: <input type="text" name="search"></label>
           </form>
           <ul>
@@ -64,16 +64,16 @@
         <h2 class="products-h2">ПЕРФОРАТОРЫ</h2>
         <div class="products-filters">
           <h3>Фильтр</h3>
-          <form class="products-filter-form" method="post" action="https://echo.htmlacademy.ru"> <!--oninput попозже пропишу -->
+          <form class="products-filter-form" method="post" action="https://echo.htmlacademy.ru"> <!--oninput не нужен, если нет output-->
             <fieldset class="products-filters-price">
               <legend>Цена:</legend>
               <input type="range" id="price-min" name="price-min" min="0" max="50000">
               <input type="range" id="price-max" name="price-max" min="0" max="50000">
               <!--за счет стилей наложим их др на др. как сделать их доступными - не знаю -->
-              <output name="price-min">0</output>
-              <output name="price-max">30000</output>
+              <input type="number" name="price-min-print" value="0">
+              <input type="number" name="price-max-print" value="30000">
             </fieldset>
-            <fieldset class="products-filters-vendors">
+            <fieldset class="products-filters-fabricator">
               <legend>Производители:</legend>
               <ul>
                 <li class="filter-option">
@@ -125,7 +125,7 @@
                 </li>
               </ul>
             </fieldset>
-            <button class="button products-filter-button" type="submit">
+            <button class="products-button products-filter-button" type="submit">
               Показать
             </button>
           </form>
@@ -133,11 +133,11 @@
         <div class="products-sorting">
           <h3>Сортировка</h3>
           <ul class="products-sorting-list">
-            <li><a class="products-sorting-item">по цене</a></li> <!--я не уверена, что спискорм ссылок надо размечать, куда ссылки ведут? -->
-            <li><a class="products-sorting-item">по типу</a></li>
-            <li><a class="products-sorting-item">по функционалу</a></li>
-            <li><a class="products-sorting-dir-up"></a></li>
-            <li><a class="products-sorting-dir-down"></a></li>
+            <li><a class="products-sorting-item" href="#">по цене</a></li>
+            <li><a class="products-sorting-item" href="#">по типу</a></li>
+            <li><a class="products-sorting-item" href="#">по функционалу</a></li>
+            <li><a class="products-sorting-dir-up" href="#"></a></li>
+            <li><a class="products-sorting-dir-down" href="#"></a></li>
           </ul>
         </div>
         <ul class="products-list">
@@ -233,10 +233,10 @@
           </li>
         </ul>
         <ul class="products-pagination">
-          <li class="products-pagination-item products-pagination-item-current"><a>1</a></li> <!--текущая страница-->
-          <li class="products-pagination-item"><a href="#">2</a></li>
-          <li class="products-pagination-item"><a href="#">3</a></li>
-          <li class="products-pagination-item"><a href="#">Следующая</a></li>
+          <li class="products-button products-pagination-item products-pagination-item-current"><a>1</a></li> <!--текущая страница-->
+          <li class="products-button products-pagination-item"><a href="#">2</a></li>
+          <li class="products-button products-pagination-item"><a href="#">3</a></li>
+          <li class="products-button"><a href="#">Следующая</a></li>
         </ul>
       </section>
       <section class="description">
@@ -295,6 +295,5 @@
   </body>
 </html>
 <!--
-1. логичнее было бы назвать эту странцу perforators.html, в не catalogue.html, т.к. это страница где-то в глубине структуры каталога, а в навигации присутствует, собственно, каталог;
-2. блок фильтров (слева) и блбок сортировки (сверху) я включила в общий раздел со списком товароы, п.ч. они все логически связаны; визуально разделять будем с помощью <div>
+
 -->
