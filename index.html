@@ -52,7 +52,7 @@
       <h1 class="visually-hidden">Техномарт. Интернет-магазин строительных материалов и инструментов для ремонта</h1>
       <section class="promo container">
         <h2 class="visually-hidden">Лучшие предложения</h2>
-        <ul><!--нужен ли общий класс, пока не знаю; если понадобится, добавлю-->
+        <ul class="promo-goods"> <!--наверное, нужен еще один класс, общий с третьим блоком promo-services; название не придумала-->
           <li class="promo-block promo-materials new-tip">
             <h3 class="promo-heading">Материалы</h3>
             <a class="button promo-link" href="#">На любой вкус</a>
@@ -66,23 +66,25 @@
             <a class="button promo-link" href="#">Для стройки</a>
           </li>
         </ul>
-        <ul class="promo-slideshow"><!--нужено ли заворачивать список слайдов и кнопки в общий див, пока не знаю; если понадобится, добавлю-->
-          <li>
-            <h3 class="promo-heading">Дрели</h3>
-            <p class="promo-description">Соседям на радость!</p>
-            <img src="img/promo-slider-2.jpg" width="620" height="266" alt="Дрели">
-            <a class="button promo-slider-link" href="catalogue.html">Открыть каталог</a>
-          </li>
-          <li>
-            <h3 class="promo-heading">Перфораторы</h3>
-            <p class="promo-description">Настоящие мужские игрушки</p>
-            <img src="img/promo-slider-1.jpg" width="620" height="266" alt="Перфораторы">
-            <a class="button promo-slider-link" href="catalogue.html">Открыть каталог</a><!--класс .promo-link исп-ся для ссылок в след блоках-->
-          </li>
-        </ul>
-        <button class="promo-back" type="button"><span class="visually-hidden">Назад</span></button>
-        <button class="promo-forward" type="button"><span class="visually-hidden">Вперед</span></button>
-        <ul><!--нужен ли общий класс, пока не знаю; если понадобится, добавлю-->
+        <div class="promo-slideshow">
+          <ul class="promo-slideshow-list"><!--при наличии дива, класс для ul, возможно, и не нужен-->
+            <li>
+              <h3 class="promo-heading">Дрели</h3>
+              <p class="promo-description">Соседям на радость!</p>
+              <img src="img/promo-slider-2.jpg" width="620" height="266" alt="Дрели">
+              <a class="button promo-slider-link" href="catalogue.html">Открыть каталог</a>
+            </li>
+            <li>
+              <h3 class="promo-heading">Перфораторы</h3>
+              <p class="promo-description">Настоящие мужские игрушки</p>
+              <img src="img/promo-slider-1.jpg" width="620" height="266" alt="Перфораторы">
+              <a class="button promo-slider-link" href="catalogue.html">Открыть каталог</a>
+            </li>
+          </ul>
+          <button class="promo-back" type="button"><span class="visually-hidden">Назад</span></button>
+          <button class="promo-forward" type="button"><span class="visually-hidden">Вперед</span></button>
+        </div>
+        <ul class="promo-services"><!--services мне не нравится, но лучшего я не придумала, надеюсь не запутаюсь-->
           <li class="promo-block promo-discount">
             <h3 class="promo-heading">Скидки 50%</h3>
             <a class="button promo-link" href="#">На 350 товаров</a>
@@ -173,7 +175,7 @@
         </ul>
       </section>
       <section class="services">
-        <div class="container services-location">
+        <div class="services-layout container">
           <h2 class="services-heading">Сервисы</h2>
           <p class="services-description">
             Хороший интернет-магазин отличается от плохого не только ценами! <br>
