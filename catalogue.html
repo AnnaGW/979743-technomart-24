@@ -28,7 +28,7 @@
           <p class="header-description">Интернет-магазин строительных материалов и инструментов для ремонта</p>
           <div class="header-info">
             <a class="header-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
-            <p class="header-address">г. Санкт-Петербург, Б.Конюшенная, д. 19/8</p>
+            <p class="header-address">г. Санкт-Петербург, Б. Конюшенная, д. 19/8</p>
           </div> <!--header-info -->
           <ul class="header-person">
             <li><a class="header-person-name" href="#">Равшан Джамшутович</a></li>
@@ -64,70 +64,69 @@
       <h1 class="catalogue-heading">Страница каталога перфораторы</h1>
       <section class="products container">
         <h2 class="visually-hidden">Выбрать товар</h2>
-        <form class="filters products-filters" method="post" action="https://echo.htmlacademy.ru">
-          <h3 class="subsection-heading">Фильтр</h3><!--такой же стиль у заголовка в подразделе сортировка-->
-          <fieldset class="filters-group">
-            <legend class="filters-name">Цена:</legend>
-            <div class="filters-range-controls">
+        <form class="strainers products-strainers" method="post" action="https://echo.htmlacademy.ru">
+          <h3 class="subsection-heading">Фильтр</h3>
+          <fieldset class="strainers-group">
+            <legend class="strainers-name">Цена:</legend>
+            <div class="range">
               <div class="scale">
                 <div class="bar"></div>
               </div>
-              <div class="filters-range-toggle filters-range-toggle-min"></div>
-              <div class="filters-range-toggle filters-range-toggle-max"></div>
+              <div class="range-toggle range-toggle-min"></div>
+              <div class="range-toggle range-toggle-max"></div>
             </div>
-            <div class="filters-price-controls">
-              <input class="filters-price-min" type="number" name="price-min" value="0" aria-label="Минимальная цена">
-              <span class="filters-price-dash">-</span>
-              <input class="filters-price-max" type="number" name="price-max" value="30000" aria-label="Максимальная цена">
-            </div>
+            <label class="visually-hidden" for="price-min-id">От</label>
+            <input class="filters-price-min" id="price-min-id" type="number" name="price-min" value="0">
+            <label class="visually-hidden" for="price-max-id">До</label>
+            <input class="filters-price-max" id="price-max-id" type="number" name="price-max" value="30000" aria-label="До">
           </fieldset>
-          <fieldset class="filters-group">
-            <legend class="filters-name">Производители:</legend>
+          <fieldset class="strainers-group">
+            <legend class="strainers-name">Производители:</legend>
               <ul>
-                <li class="filters-option">
-                  <input class="filter-input filter-checkbox-check-on" id="checkbox-bosch-field" type="checkbox" name="Bosch" checked>
-                  <label class="checkbox-check-on" for="checkbox-bosch-field">
+                <li class="filter">
+                  <input class="filter-input visually-hidden" id="filter-bosch" type="checkbox" name="vendors" value="Bosch" checked>
+                  <label class="filter-label filter-checkbox" for="filter-bosch">
                     Bosch
                   </label>
                 </li>
-                <li class="filters-option">
-                  <input class="filter-checkbox filter-checkbox-check-off" id="checkbox-interskol-field" type="checkbox" name="Interskol">
-                  <label class="checkbox-check-off" for="checkbox-interskol-field">
+                <li class="filter">
+                  <input class="filter-input visually-hidden" id="filter-interskol" type="checkbox" name="vendors" value="Interskol">
+                  <label class="filter-label filter-checkbox" for="filter-interskol">
                     Интерскол
                   </label>
                 </li>
-                <li class="filters-option">
-                  <input class="filter-checkbox filter-checkbox-check-on" id="checkbox-makita-field" type="checkbox" name="Makita" checked>
-                  <label class="checkbox-check-on" for="checkbox-makita-field">
+                <li class="filter">
+                  <input class="filter-input visually-hidden" id="filter-makita" type="checkbox" name="vendors" value="Makita" checked>
+                  <label class="filter-label filter-checkbox" for="filter-makita">
                     Makita
                   </label>
                 </li>
-                <li class="filters-option">
-                  <input class="filter-checkbox filter-checkbox-check-off" id="checkbox-dewalt-field" type="checkbox" name="Dewalt">
-                  <label class="checkbox-check-off" for="checkbox-dewalt-field">
+                <li class="filter">
+                  <input class="filter-input visually-hidden" id="filter-dewalt" type="checkbox" name="vendors" value="Dewalt">
+                  <label class="filter-label filter-checkbox" for="filter-dewalt">
                     Dewalt
                   </label>
                 </li>
-                <li class="filters-option">
-                  <input class="filter-checkbox filter-checkbox-check-off" id="checkbox-hitachi-field" type="checkbox" name="Hitachi">
-                  <label class="checkbox-check-off" for="checkbox-hitachi-field">
+                <li class="filter">
+                  <input class="filter-input visually-hidden" id="filter-hitachi" type="checkbox" name="vendors" value="Hitachi">
+                  <label class="filter-label filter-checkbox" for="filter-hitachi">
                     Hitachi
                   </label>
                 </li>
               </ul>
           </fieldset>
-          <fieldset class="filters-group">
-              <legend class="filters-name">Питание:</legend>
+          <fieldset class="strainers-group">
+            <legend class="strainers-name">Питание:</legend>
               <ul>
-                <li class="filters-option">
-                  <input  class="filter-input filter-radio-check-on" id="radio-battery-field" type="radio" name="supply" value="battery" checked>
-                  <label class="radio-check-on" for="radio-battery-field">
+                <li class="filter">
+                  <input class="filter-input visually-hidden" id="filter-battery" type="radio" name="supply" value="battery" checked>
+                  <label class="filter-label filter-radio" for="filter-battery">
                     Аккумуляторные
                   </label>
                 </li>
-                <li class="filters-option">
-                  <input  class="filter-input filter-radio-check-off" id="radio-power-field" type="radio" name="supply" value="power">
-                  <label class="radio-check-off" for="radio-power-field">
+                <li class="filter">
+                  <input class="filter-input visually-hidden" id="filter-power" type="radio" name="supply" value="power">
+                  <label class="filter-label filter-radio" for="filter-power">
                     Сетевые
                   </label>
                 </li>
@@ -270,7 +269,7 @@
             <li><a href="#">Доставка</a></li>
             <li><a href="#">Контакты</a></li>
           </ul>
-          <p class="footer-contacts">г. Санкт-Петербург, Б.Конюшенная, д. 19/8
+          <p class="footer-contacts">г. Санкт-Петербург, Б. Конюшенная, д. 19/8
             <a href="tel:+78125550555" class="footer-phone">+7 (812) 555-05-55</a>
           </p>
           <ul class="footer-products">
@@ -298,10 +297,10 @@
         </div> <!--container -->
       </div> <!-- footer-bottom-->
     </footer>
-    <section class="modal modal-cart">
-      <h2 class="modal-cart-h2">Товар добавлен в корзину</h2>
-      <a class="button modal-cart-order" href="#">Оформить заказ</a>
-      <button class="button modal-close js-modal-close">Продолжить покупки</button>
+    <section class="modal cart">
+      <h2 class="cart-heading">Товар добавлен в корзину</h2>
+      <a class="button cart-order" href="#">Оформить заказ</a>
+      <button class="button cart-go-on js-modal-close">Продолжить покупки</button>
       <button class="modal-close js-modal-close"><span class="visually-hidden">Закрыть</span></button> <!--возм. хватит одного класса? -->
     </section>
   </body>
