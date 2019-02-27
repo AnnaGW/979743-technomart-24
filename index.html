@@ -18,11 +18,11 @@
           <img src="img/logo-technomart.svg" width="137" height="22" alt="Логотип Техномарт">
         </a>
         <form class="header-search" action="https://echo.htmlacademy.ru" method="get">
-          <label>Поиск: <input type="search" name="search"></label>
+          <label  aria-label="Поиск"><input type="search" name="search" placeholder="Поиск:"></label>
         </form>
         <ul class="user-navigation">
-          <li><a class="header-bookmarks" href="#">Закладки: 0</a></li>
-          <li><a class="header-cart" href="#">Корзина: 0</a></li>
+          <li><a class="user-navigation-item header-bookmarks" href="#">Закладки: 0</a></li>
+          <li><a class="user-navigation-item header-cart" href="#">Корзина: 0</a></li>
           <li><a class="header-checkout" href="#">Оформить заказ</a></li>
         </ul>
       </div>
@@ -78,13 +78,13 @@
       <div class="promo-slideshow">
         <ul class="promo-slideshow-list">
           <li>
-            <h3 class="promo-heading">Дрели</h3>
+            <h3 class="promo-slideshow-heading">Дрели</h3>
             <p class="promo-description">Соседям на радость!</p>
             <img src="img/promo-slider-2.jpg" width="620" height="266" alt="Дрели">
             <a class="button promo-slider-link" href="catalogue.html">Открыть каталог</a>
           </li>
           <li>
-            <h3 class="promo-heading">Перфораторы</h3>
+            <h3 class="promo-slideshow-heading">Перфораторы</h3>
             <p class="promo-description">Настоящие мужские игрушки</p>
             <img src="img/promo-slider-1.jpg" width="620" height="266" alt="Перфораторы">
             <a class="button promo-slider-link" href="catalogue.html">Открыть каталог</a>
@@ -191,7 +191,7 @@
     <section class="services">
       <div class="services-layout container">
         <h2 class="section-heading">Сервисы</h2>
-        <p class="services-description">
+        <p class="services-description section-description">
           Хороший интернет-магазин отличается от плохого не только ценами! <br>
           Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
         </p>
@@ -203,21 +203,21 @@
         <ul class="services-list">
           <li class="services-detail services-delivery">
             <h3 class="services-subtitle">Доставка</h3>
-            <p class="services-specification">
+            <p class="services-specification section-description">
               Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! <br>
               Ведь мы неплохо заработаем, поднимая его на ваш этаж!
             </p>
           </li>
           <li class="services-detail services-warranty">
             <h3 class="services-subtitle">Гарантия</h3>
-            <p class="services-specification">
+            <p class="services-specification section-description">
               Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгаранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. <br>
               Дом уж восстановите как-нибудь сами.
             </p>
           </li>
           <li class="services-detail services-credit">
             <h3 class="services-subtitle">Кредит</h3>
-            <p class="services-specification">
+            <p class="services-specification section-description">
               Залезть в долговую яму стало проще! <br>
               Кредитные консультанты придут вам на помощь.
             </p>
@@ -229,10 +229,10 @@
     <div class="container">
       <section class="about">
         <h2 class="section-heading"> Компания "Техномарт"</h2>
-        <p class="about-description">
+        <p class="about-description section-description">
           Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах
         </p>
-        <p class="about-description">
+        <p class="about-description section-description">
           Мы можем доставить ваш товар в самые отдаленные точки России! <br>
           Техномарт работает со многими транспортными компаниями:
         </p>
@@ -245,7 +245,7 @@
       </section>
       <section class="contacts">
         <h2 class="section-heading">Контакты</h2>
-        <p  class="contacts-description">Вы можете забрать товар сами, заехав в наш офис</p>
+        <p  class="contacts-description section-description">Вы можете забрать товар сами, заехав в наш офис</p>
         <a class="contacts-map" href="https://yandex.ru/maps/-/CCQXMPmR">
           <img src="img/map-small.jpg" width="300" height="158" alt="Карта">
           <!--описание нужно получше придумать -->

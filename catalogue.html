@@ -15,11 +15,11 @@
           <img src="img/logo-technomart.svg" width="137" height="22" alt="Логотип Техномарт">
         </a>
         <form class="header-search" action="https://echo.htmlacademy.ru" method="get">
-          <label>Поиск: <input type="search" name="search"></label>
+          <label  aria-label="Поиск"><input type="search" name="search" placeholder="Поиск:"></label>
         </form>
         <ul class="user-navigation">
           <li><a class="header-bookmarks" href="#">Закладки: 0</a></li>
-          <li><a class="header-cart" href="#">Корзина: 0</a></li>
+          <li><a class="header-cart-inner" href="#">Корзина: 10</a></li>
           <li><a class="header-checkout" href="#">Оформить заказ</a></li>
         </ul>
       </div>
@@ -37,8 +37,8 @@
         <ul class="header-person">
           <li><a class="header-person-name" href="#">Равшан Джамшутович</a></li>
           <li><a class="header-person-exit" href="#"><span class="visually-hidden">Выход</span></a></li>
-          <li><a class="header-reg" href="#">Мои заказы</a></li>
-          <li><a class="header-reg" href="#">Личный кабинет</a></li>
+          <li><a class="header-person-data" href="#">Мои заказы</a></li>
+          <li><a class="header-person-data" href="#">Личный кабинет</a></li>
         </ul>
         <nav class="header-navigation">
           <ul class="header-navigation-list">
@@ -58,16 +58,16 @@
   </header>
   <main>
     <nav class="breadcrumbs container">
-      <ul>
-        <li class="breadcrumbs-without">
-          <a class="breadcrumbs-item" href="index.html"><span class="visually-hidden">На главную</span></a>
+      <ul class="breadcrumbs-list">
+        <li>
+          <a class="breadcrumbs-item breadcrumbs-home" href="index.html"><span class="visually-hidden">На главную</span></a>
         </li>
         <li><a class="breadcrumbs-item" href="#">Каталог</a></li>
         <li><a class="breadcrumbs-item" href="#">Инструмент</a></li>
         <li><a class="breadcrumbs-item">Перфораторы</a></li>
       </ul>
     </nav>
-    <h1 class="catalogue-heading">Страница каталога перфораторы</h1>
+    <h1 class="catalogue-heading  container">Перфораторы</h1>
     <section class="products container">
       <h2 class="visually-hidden">Выбрать товар</h2>
       <form class="strainers products-strainers" method="post" action="https://echo.htmlacademy.ru">
@@ -88,7 +88,7 @@
         </fieldset>
         <fieldset class="strainers-group">
           <legend class="strainers-name">Производители:</legend>
-          <ul>
+          <ul class="strainers-name-list">
             <li class="filter">
               <input class="filter-input visually-hidden" id="filter-bosch" type="checkbox" name="vendors" value="Bosch" checked>
               <label class="filter-label filter-checkbox" for="filter-bosch">
@@ -123,7 +123,7 @@
         </fieldset>
         <fieldset class="strainers-group">
           <legend class="strainers-name">Питание:</legend>
-          <ul>
+          <ul class="strainers-name-list">
             <li class="filter">
               <input class="filter-input visually-hidden" id="filter-battery" type="radio" name="supply" value="battery" checked>
               <label class="filter-label filter-radio" for="filter-battery">
@@ -169,7 +169,7 @@
             <del class="products-price-old">22500 P.</del>
             <p class="products-price-new">15500 P.</p>
           </li>
-          <li class="button products-item">
+          <li class="products-item">
             <!-- 2 -->
             <a class="button products-buy" href="#">Купить</a>
             <a class="products-inbookmarks" href="#">В закладки</a>
@@ -302,7 +302,7 @@
     <div class="footer-bottom">
       <div class="container">
         <p>&copy; 2010-2019 Компания "Техномарт" <br>Все права защищены</p>
-        <ul>
+        <ul class="footer-social-list">
           <li><a class="footer-social footer-vk" href="#"><span class="visually-hidden">Вконтакте</span></a></li>
           <li><a class="footer-social footer-fb" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
           <li><a class="footer-social footer-ig" href="#"><span class="visually-hidden">Инстаграм</span></a></li>
