@@ -11,6 +11,7 @@
   font-style: normal;
   src: local("Cuprum"), url("../fonts/cuprumbold.woff2") format("woff2"), url("../fonts/cuprumbold.woff") format("woff");
 }
+
 @font-face {
   font-family: "Cuprum";
   font-weight: 400;
@@ -29,14 +30,16 @@
   font-family: "PT Sans";
   font-weight: 400;
   font-style: normal;
-  src: local("PT Sans"), url("../fonts/ptsans.woff2") format("woff2"), url("../fonts/ptsans.woff") format("woff");
+  /*src: local("PT Sans"), url("../fonts/ptsans.woff2") format("woff2"), url("../fonts/ptsans.woff") format("woff");*/
+  src: url("../fonts/ptsans.woff2") format("woff2"), url("../fonts/ptsans.woff") format("woff");
 }
 
 @font-face {
   font-family: "PT Sans";
   font-weight: 700;
   font-style: normal;
-  src: local("PT Sans"), url("../fonts/ptsansbold.woff2") format("woff2"), url("../fonts/ptsansbold.woff") format("woff");
+  src: local("PT-Sans"), url("../fonts/ptsansbold.woff2") format("woff2"), url("../fonts/ptsansbold.woff") format("woff");
+  /*src: url("../fonts/ptsansbold.woff2") format("woff2"), url("../fonts/ptsansbold.woff") format("woff");*/
 }
 
 body {
@@ -125,11 +128,6 @@ a {
   box-shadow: 0 5px 0 0 #8e1e26;
 }
 
-.user-navigation {
-  list-style: none;
-  padding: 0;
-}
-
 .header-search input {
   font: inherit;
   border: none;
@@ -152,6 +150,15 @@ a {
 .header-search input::-webkit-search-results-button,
 .header-search input::-webkit-search-results-decoration {
   display: none;
+}
+
+.header-search input::placeholder {
+  color: #ffffff;
+}
+
+.user-navigation {
+  list-style: none;
+  padding: 0;
 }
 
 .header-bookmarks:hover,
@@ -266,6 +273,26 @@ a {
   color: rgba(0, 0, 0, 0.3);
 }
 
+.header-person-icons {
+  /*общий класс для .header-person-name и .header-person-exit*/
+}
+
+.header-person-name {
+  width: 20px;
+  height: 18px;
+  padding-left: 20px;
+  background-image: url("../img/icon-user.svg");
+  background-repeat: no-repeat;
+}
+
+.header-person-exit {
+  display: block;
+  width: 20px;
+  height: 18px;
+  background-image: url("../img/icon-logout.svg");
+  background-repeat: no-repeat;
+}
+
 .header-person-data {
   font-size: 16px;
   line-height: 18px;
@@ -330,6 +357,7 @@ a {
 .promo-slideshow-list {
   padding: 0;
   list-style: none;
+  background-color: #c6beb7;
 }
 
 .promo-slideshow-heading {
@@ -337,22 +365,14 @@ a {
   line-height: 36px;
   text-transform: uppercase;
   color: #ffffff;
-  background-color: rgba(142, 125, 112, 0.5);
-  /*фон временный!!*/
 }
 
 .promo-description {
   font-size: 18px;
   line-height: 24px;
   color: #ffffff;
-  background-color: rgba(142, 125, 112, 0.5);
-  /*фон временный!!*/
 }
 
-/*.promo-slider-link,
-.section-header-link {
-  background-color: #ee3643;
-}*/
 .promo-slider-link:hover,
 .section-header-link:hover {
   background-color: #ca2c37;
@@ -397,9 +417,6 @@ a {
   background-color: #ee3643;
 }
 
-/*.products-buy {
-  background-color: #63a63e;
-}*/
 .products-buy {
   background-color: #63a63e;
   /*border-bottom: 3px solid #367315;*/
@@ -506,11 +523,6 @@ a {
   line-height: 20px;
 }
 
-.about-more,
-.contacts-write {
-  background-color: #ee3643;
-}
-
 /*----------------catalogue main----------------------------*/
 .breadcrumbs-list {
   padding: 0;
@@ -531,6 +543,7 @@ a {
 .catalogue-heading {
   font-size: 30px;
   line-height: 30px;
+  font-weight: 400;
   color: #32425c;
   text-transform: uppercase;
   background-color: #f2f6f8;
@@ -631,6 +644,10 @@ a {
 
 .products-button:active {
   border-color: #ee3643;
+}
+
+.filter-button {
+  outline: none;
 }
 
 .pagination-item-current {
