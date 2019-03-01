@@ -327,6 +327,10 @@ a {
 }
 
 /*----------------index main----------------------------*/
+.promo {
+  color: #ffffff;
+}
+
 .promo-offers {
   padding: 0;
   list-style: none;
@@ -336,7 +340,6 @@ a {
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
-  color: #ffffff;
 }
 
 .promo-link {
@@ -370,10 +373,6 @@ a {
 
 .promo-delivery {
   background-color: #ffc047;
-}
-
-.promo-slideshow {
-  color: #ffffff;
 }
 
 .promo-slideshow-list {
