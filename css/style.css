@@ -69,16 +69,13 @@ a {
 }
 
 .section-header {
-  font-size: 30px;
-  line-height: 30px;
-  text-transform: uppercase;
-  color: #32425c;
   background-color: #f9f5f0;
 }
 
 .section-heading {
   font-size: 30px;
   line-height: 30px;
+  font-weight: 400;
   text-transform: uppercase;
 }
 
@@ -98,6 +95,17 @@ a {
   border: none;
   border-radius: 2px;
   background-color: #ee3643;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #ca2c37;
+  color: #ffffff;
+}
+
+.button:active {
+  background-color: #ba2732;
+  color: #ffffff;
 }
 
 /*-----------index header-----------------------------------*/
@@ -393,14 +401,12 @@ a {
   line-height: 24px;
 }
 
-.promo-slider-link:hover,
-.section-header-link:hover {
-  background-color: #ca2c37;
-}
-
-.promo-slider-link:active,
-.section-header-link:active {
-  background-color: #ba2732;
+.section-header-heading {
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #32425c;
 }
 
 .products-list {
@@ -410,6 +416,7 @@ a {
 
 .products-item {
   border: 2px solid #eaeaea;
+  text-align: center;
 }
 
 .products-name,
@@ -487,6 +494,10 @@ a {
   box-shadow: 0 0 25px 0 rgba(41, 52, 73, 0.5);
 }
 
+.vendors-item:active {
+  opacity: 0.3;
+}
+
 .services {
   background-color: #f4f8f9;
 }
@@ -503,28 +514,36 @@ a {
   font-weight: 700;
   color: #ffffff;
   background-color: #32425c;
+  border-top: 1px solid #405069;
+  border-bottom: 1px solid #293449
+}
+
+.services-menu-item-current {
+  background-color: #ffffff;
+  color: #32425c;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
 }
 
 .services-menu-item:hover,
 .services-menu-item:focus {
+  color: #ffffff;
   background-color: #293449;
-}
-
-.services-menu-item:active {
-  background-color: #ffffff;
-  color: #32425c;
+  border-top: 1px solid #293449;
+  border-bottom: 1px solid #293449;
 }
 
 .services-subtitle {
   font-size: 36px;
   line-height: 36px;
+  font-weight: 400;
   color: #32425c;
   text-transform: uppercase;
 }
 
 .services-detail {
   background-repeat: no-repeat;
-  background-position: 100% 50%;
+  background-position: 100% 100%;
 }
 
 .services-delivery {
@@ -552,6 +571,15 @@ a {
   line-height: 18px;
   text-transform: uppercase;
   list-style: none;
+}
+
+.breadcrumbs-item:hover,
+.breadcrumbs-item:focus {
+  color: #ee3643;
+}
+
+.breadcrumbs-item:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .breadcrumbs-home {
@@ -629,8 +657,6 @@ a {
   border-radius: 50%;
   background-image: url("../img/filter-button.svg");
   outline: none;
-  /*border: 8px solid #ffffff;
-  box-shadow: 0 2px 0 0 #e0ddd8;*/
 }
 
 .range-toggle-min {
@@ -696,6 +722,29 @@ input[type="radio"]:checked:disabled+label::before {
   color: rgba(0, 0, 0, 0.3);
 }
 
+.sorting-list {
+  list-style: none;
+  padding: 0;
+}
+
+.sorting-item {
+  font-size: 13px;
+  line-height: 18px;
+  color: rgb(0, 0, 0, 0.3);
+  border-bottom: 1px dotted #ee3643;
+}
+
+.sorting-item-current {
+  color: #ee3643;
+  border: none;
+}
+
+.sorting-item:hover,
+.sorting-item:focus {
+  color: #000000;
+  border-bottom: 1px solid #ee3643;
+}
+
 .products-button {
   text-transform: uppercase;
   background-color: transparent;
@@ -714,6 +763,11 @@ input[type="radio"]:checked:disabled+label::before {
 
 .filter-button {
   outline: none;
+}
+
+.pagination {
+  padding: 0;
+  list-style: none;
 }
 
 .pagination-item-current {
@@ -759,6 +813,7 @@ input[type="radio"]:checked:disabled+label::before {
 
 .footer-company,
 .footer-products {
+  padding: 0;
   list-style: none;
 }
 
@@ -840,4 +895,29 @@ input[type="radio"]:checked:disabled+label::before {
 .footer-link:active {
   color: #ee3643;
   text-decoration: none;
+}
+
+/*---------------------modal feedback ---------------------*/
+.feedback-field {
+  border: 2px solid #a9a9a9;
+  border-radius: 2px;
+}
+
+.feedback-field::placeholder {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  color: #a9a9a9;
+}
+
+/*---------------------modal cart ---------------------*/
+.cart-heading {
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+.cart-go-on {
+  background-color: #ffffff;
+  color: #000000;
 }
