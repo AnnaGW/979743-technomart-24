@@ -335,6 +335,7 @@ a {
 .promo-heading {
   font-size: 24px;
   line-height: 30px;
+  font-weight: 700;
   color: #ffffff;
 }
 
@@ -371,6 +372,10 @@ a {
   background-color: #ffc047;
 }
 
+.promo-slideshow {
+  color: #ffffff;
+}
+
 .promo-slideshow-list {
   padding: 0;
   list-style: none;
@@ -380,14 +385,13 @@ a {
 .promo-slideshow-heading {
   font-size: 36px;
   line-height: 36px;
+  font-weight: 700;
   text-transform: uppercase;
-  color: #ffffff;
 }
 
 .promo-description {
   font-size: 18px;
   line-height: 24px;
-  color: #ffffff;
 }
 
 .promo-slider-link:hover,
