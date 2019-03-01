@@ -9,37 +9,35 @@
   font-family: "Cuprum";
   font-weight: 700;
   font-style: normal;
-  src: local("Cuprum"), url("../fonts/cuprumbold.woff2") format("woff2"), url("../fonts/cuprumbold.woff") format("woff");
+  src: url("../fonts/cuprumbold.woff2") format("woff2"), url("../fonts/cuprumbold.woff") format("woff");
 }
 
 @font-face {
   font-family: "Cuprum";
   font-weight: 400;
   font-style: italic;
-  src: local("Cuprum"), url("../fonts/cuprumitalic.woff2") format("woff2"), url("../fonts/cuprumitalic.woff") format("woff");
+  src: url("../fonts/cuprumitalic.woff2") format("woff2"), url("../fonts/cuprumitalic.woff") format("woff");
 }
 
 @font-face {
   font-family: "Cuprum";
   font-weight: 700;
   font-style: italic;
-  src: local("Cuprum"), url("../fonts/cuprumbolditalic.woff2") format("woff2"), url("../fonts/cuprumbolditalic.woff") format("woff");
+  src: url("../fonts/cuprumbolditalic.woff2") format("woff2"), url("../fonts/cuprumbolditalic.woff") format("woff");
 }
 
 @font-face {
   font-family: "PT Sans";
   font-weight: 400;
   font-style: normal;
-  /*src: local("PT Sans"), url("../fonts/ptsans.woff2") format("woff2"), url("../fonts/ptsans.woff") format("woff");*/
-  src: url("../fonts/ptsans.woff2") format("woff2"), url("../fonts/ptsans.woff") format("woff");
+  src: local("PT Sans"), url("../fonts/ptsans.woff2") format("woff2"), url("../fonts/ptsans.woff") format("woff");
 }
 
 @font-face {
   font-family: "PT Sans";
   font-weight: 700;
   font-style: normal;
-  src: local("PT-Sans"), url("../fonts/ptsansbold.woff2") format("woff2"), url("../fonts/ptsansbold.woff") format("woff");
-  /*src: url("../fonts/ptsansbold.woff2") format("woff2"), url("../fonts/ptsansbold.woff") format("woff");*/
+  src: url("../fonts/ptsansbold.woff2") format("woff2"), url("../fonts/ptsansbold.woff") format("woff");
 }
 
 body {
@@ -143,12 +141,15 @@ a {
   outline: none;
 }
 
-.header-search input::-ms-clear,
-.header-search input::-ms-reveal,
-.header-search input::-webkit-search-decoration,
-.header-search input::-webkit-search-cancel-button,
-.header-search input::-webkit-search-results-button,
-.header-search input::-webkit-search-results-decoration {
+.header-search input[type="search"]::-ms-clear,
+.header-search input[type="search"]::-ms-reveal {
+  display: none;
+}
+
+.header-search input[type="search"]::-webkit-search-decoration,
+.header-search input[type="search"]::-webkit-search-cancel-button,
+.header-search input[type="search"]::-webkit-search-results-button,
+.header-search input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 
@@ -257,8 +258,17 @@ a {
 }
 
 /*----------------catalogue header----------------------------*/
-.header-cart-inner {
+.header-cart-full {
   background-color: #ee3643;
+}
+
+.header-cart-full:hover,
+.header-cart-full:focus {
+  background-color: #ca2c37;
+}
+
+.header-cart-full:active {
+  background-color: #ba2732;
 }
 
 .header-person-name {
@@ -273,21 +283,21 @@ a {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.header-person-icons {
+.header-person-button {
   /*общий класс для .header-person-name и .header-person-exit*/
 }
 
 .header-person-name {
-  /*width: 20px;
-  height: 18px;*/
   padding-left: 20px;
   background-image: url("../img/icon-user.svg");
   background-repeat: no-repeat;
 }
+
 .header-person-name:hover,
 .header-person-name:focus {
   /*как прописать изменение цвета svg-иконки???*/
 }
+
 .header-person-name:active {
   color: rgba(0, 0, 0, 0.3)
 }
@@ -487,6 +497,7 @@ a {
 .services-menu-item {
   font-size: 21px;
   line-height: 30px;
+  font-weight: 700;
   color: #ffffff;
   background-color: #32425c;
 }
@@ -607,13 +618,16 @@ a {
   position: absolute;
   top: 30px;
   left: 0;
-  width: 4px;
-  height: 4px;
+  width: 20px;
+  height: 23px;
   padding: 0;
   background-color: #b1b1b1;
-  border: 8px solid #ffffff;
+  border: none;
   border-radius: 50%;
-  box-shadow: 0 2px 0 0 #e0ddd8;
+  background-image: url("../img/filter-button.svg");
+  outline: none;
+  /*border: 8px solid #ffffff;
+  box-shadow: 0 2px 0 0 #e0ddd8;*/
 }
 
 .range-toggle-min {
@@ -637,17 +651,46 @@ a {
   list-style: none;
 }
 
-input[type="checkbox"] + label::before {
-    content: "";
-    display: inline-block;
-    width: 27px;
-    height: 23px;
-    background-image: url("../img/filters-checkbox-off.svg");
-    background-repeat: no-repeat;
+input[type="checkbox"]+label::before {
+  content: "";
+  display: inline-block;
+  width: 27px;
+  height: 23px;
+  background-image: url("../img/filters-checkbox-off.svg");
+  background-repeat: no-repeat;
 }
 
-input[type="checkbox"]:checked + label::before {
+input[type="checkbox"]:checked+label::before {
   background-image: url("../img/filters-checkbox-on.svg");
+}
+
+input[type="checkbox"]:disabled+label::before {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+input[type="checkbox"]:checked:disabled+label::before {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+input[type="radio"]+label::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-image: url("../img/filters-radio-off.svg");
+  background-repeat: no-repeat;
+}
+
+input[type="radio"]:checked+label::before {
+  background-image: url("../img/filters-radio-on.svg");
+}
+
+input[type="radio"]:disabled+label::before {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+input[type="radio"]:checked:disabled+label::before {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .products-button {
