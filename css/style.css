@@ -278,11 +278,18 @@ a {
 }
 
 .header-person-name {
-  width: 20px;
-  height: 18px;
+  /*width: 20px;
+  height: 18px;*/
   padding-left: 20px;
   background-image: url("../img/icon-user.svg");
   background-repeat: no-repeat;
+}
+.header-person-name:hover,
+.header-person-name:focus {
+  /*как прописать изменение цвета svg-иконки???*/
+}
+.header-person-name:active {
+  color: rgba(0, 0, 0, 0.3)
 }
 
 .header-person-exit {
@@ -628,6 +635,19 @@ a {
 .strainers-name-list {
   padding: 0;
   list-style: none;
+}
+
+input[type="checkbox"] + label::before {
+    content: "";
+    display: inline-block;
+    width: 27px;
+    height: 23px;
+    background-image: url("../img/filters-checkbox-off.svg");
+    background-repeat: no-repeat;
+}
+
+input[type="checkbox"]:checked + label::before {
+  background-image: url("../img/filters-checkbox-on.svg");
 }
 
 .products-button {
