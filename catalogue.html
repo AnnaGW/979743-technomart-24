@@ -4,15 +4,14 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Техномарт</title>
-  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
-  <header class="main-header">
+  <header>
     <div class="header-top">
-      <div class="container header-flex">
+      <div class="container">
         <a class="header-logo" href="index.html">
           <img src="img/logo-technomart.svg" width="137" height="22" alt="Логотип Техномарт">
         </a>
@@ -28,8 +27,8 @@
       <!--container -->
     </div>
     <!--header-top -->
-    <div class="header-middle">
-      <div class="container header-flex">
+    <div class="header-bottom">
+      <div class="container">
         <p class="header-description">Интернет-магазин строительных материалов и инструментов для ремонта</p>
         <div class="header-info">
           <a class="header-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
@@ -42,12 +41,6 @@
           <li><a class="header-person-data" href="#">Мои заказы</a></li>
           <li><a class="header-person-data" href="#">Личный кабинет</a></li>
         </ul>
-      </div>
-      <!--container-->
-    </div>
-    <!--header-middle -->
-    <div class="header-bottom">
-      <div class="container">
         <nav class="header-navigation">
           <ul class="header-navigation-list">
             <li><a class="header-navigation-item">Главная</a></li>
@@ -261,7 +254,6 @@
               <img src="img/perforator-1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
               <figcaption class="products-name">Перфоратор BOSCH BFG 2000</figcaption>
             </figure>
-
             <p class="products-price-new">12500 P.</p>
           </li>
         </ul>
@@ -295,11 +287,6 @@
           <li><a href="#">Доставка</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
-      </div>
-      <!--container -->
-    </div> <!-- footer-top-->
-    <div class="footer-middle">
-      <div class="container footer-flex">
         <p class="footer-contacts">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
           <a href="tel:+78125550555" class="footer-phone">+7 (812) 555-05-55</a>
         </p>
@@ -331,11 +318,14 @@
     </div> <!-- footer-bottom-->
   </footer>
   <section class="modal cart">
-    <h2 class="cart-heading">Товар добавлен в корзину</h2>
-    <a class="button cart-order" href="#">Оформить заказ</a>
-    <button class="button cart-go-on js-modal-close">Продолжить покупки</button>
-    <button class="modal-close js-modal-close"><span class="visually-hidden">Закрыть</span></button>
-    <!--возм. хватит одного класса? -->
+    <div class="modal-top">
+      <h2 class="cart-heading">Товар добавлен в корзину</h2>
+    </div>
+    <div class="modal-bottom">
+      <a class="button cart-order" href="#">Оформить заказ</a>
+      <button class="button cart-go-on js-modal-close">Продолжить покупки</button>
+    </div>
+    <button class="modal-close js-modal-close"><span class="visually-hidden">Закрыть</span></button>  
   </section>
 </body>
 

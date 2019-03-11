@@ -4,8 +4,6 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Техномарт</title>
-  <!--<link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet"> -->
-
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
@@ -13,7 +11,7 @@
 <body>
   <header class="main-header">
     <div class="header-top">
-      <div class="container header-flex">
+      <div class="container">
         <a class="header-logo">
           <img src="img/logo-technomart.svg" width="137" height="22" alt="Логотип Техномарт">
         </a>
@@ -29,8 +27,8 @@
       <!--container -->
     </div>
     <!--header-top -->
-    <div class="header-middle">
-      <div class="container header-flex">
+    <div class="header-bottom">
+      <div class="container">
         <p class="header-description">Интернет-магазин строительных материалов и инструментов для ремонта</p>
         <div class="header-info">
           <a class="header-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
@@ -41,12 +39,6 @@
           <li><a class="header-enter " href="#">Войти</a></li>
           <li><a class="header-reg" href="#">Регистрация</a></li>
         </ul>
-      </div>
-      <!--container-->
-    </div>
-    <!--header-bottom -->
-    <div class="header-bottom">
-      <div class="container">
         <nav class="header-navigation">
           <ul class="header-navigation-list">
             <li><a class="header-navigation-item">Главная</a></li>
@@ -79,34 +71,36 @@
           <a class="promo-link button" href="#">Для стройки</a>
         </li>
       </ul>
-      <div class="promo-slideshow">
-        <ul class="promo-slideshow-list">
-          <li>
-            <h3 class="promo-slideshow-heading">Дрели</h3>
-            <p class="promo-description">Соседям на радость!</p>
-            <img src="img/promo-slider-2.jpg" width="620" height="266" alt="Дрели">
-            <a class="button promo-slider-link" href="catalogue.html">Открыть каталог</a>
+      <div class="promo-flex-wrap">
+        <div class="promo-slideshow">
+          <ul class="promo-slideshow-list">
+            <li class="display-none">
+              <h3 class="promo-slideshow-heading">Дрели</h3>
+              <p class="promo-description">Соседям на радость!</p>
+              <img src="img/promo-slider-2.jpg" width="620" height="266" alt="Дрели">
+              <a class="button promo-slider-link" href="catalogue.html">Открыть каталог</a>
+            </li>
+            <li>
+              <h3 class="promo-slideshow-heading">Перфораторы</h3>
+              <p class="promo-description">Настоящие мужские игрушки</p>
+              <img src="img/promo-slider-1.jpg" width="620" height="266" alt="Перфораторы">
+              <a class="button promo-slider-link" href="catalogue.html">Открыть каталог</a>
+            </li>
+          </ul>
+          <button class="promo-back" type="button"><span class="visually-hidden">Назад</span></button>
+          <button class="promo-forward" type="button"><span class="visually-hidden">Вперед</span></button>
+        </div>
+        <ul class="promo-services promo-offers">
+          <li class="promo-block promo-discount">
+            <h3 class="promo-heading">Скидки 50%</h3>
+            <a class="promo-link button" href="#">На 350 товаров</a>
           </li>
-          <li>
-            <h3 class="promo-slideshow-heading">Перфораторы</h3>
-            <p class="promo-description">Настоящие мужские игрушки</p>
-            <img src="img/promo-slider-1.jpg" width="620" height="266" alt="Перфораторы">
-            <a class="button promo-slider-link" href="catalogue.html">Открыть каталог</a>
-          </li>
-        </ul>
-        <button class="promo-back" type="button"><span class="visually-hidden">Назад</span></button>
-        <button class="promo-forward" type="button"><span class="visually-hidden">Вперед</span></button>
-      </div>
-      <ul class="promo-services promo-offers">
-        <li class="promo-block promo-discount">
-          <h3 class="promo-heading">Скидки 50%</h3>
-          <a class="promo-link button" href="#">На 350 товаров</a>
-        </li>
-        <li class="promo-block promo-delivery">
-          <h3 class="promo-heading">Доставка</h3>
-          <a class="promo-link button" href="#">Бесплатно</a>
+          <li class="promo-block promo-delivery">
+            <h3 class="promo-heading">Доставка</h3>
+            <a class="promo-link button" href="#">Бесплатно</a>
         </li>
       </ul>
+      </div>
     </section>
     <section class="popular container">
       <div class="section-header">
@@ -167,7 +161,7 @@
       <ul class="vendors-list">
         <li>
           <a class="vendors-item" href="#">
-            <img src="img/vendors-bosch.jpg" width="123" height="40" alt="Брэнд Бош">
+            <img src="img/vendors-bosch.jpg" width="126" height="37" alt="Брэнд Бош">
           </a>
         </li>
         <li>
@@ -177,32 +171,32 @@
         </li>
         <li>
           <a class="vendors-item" href="#">
-            <img src="img/vendors-dewalt.jpg" width="123" height="40" alt="Брэнд Девольт">
+            <img src="img/vendors-dewalt.jpg" width="146" height="44" alt="Брэнд Девольт">
           </a>
         </li>
         <li>
           <a class="vendors-item" href="#">
-            <img src="img/vendors-interskol.jpg" width="123" height="40" alt="Брэнд Интерскол">
+            <img src="img/vendors-interskol.jpg" width="200" height="88" alt="Брэнд Интерскол">
           </a>
         </li>
         <li>
           <a class="vendors-item" href="#">
-            <img src="img/vendors-hitachi.jpg" width="123" height="40" alt="Брэнд Хитачи">
+            <img src="img/vendors-hitachi.jpg" width="169" height="31" alt="Брэнд Хитачи">
           </a>
         </li>
         <li>
           <a class="vendors-item" href="#">
-            <img src="img/vendors-lg.jpg" width="123" height="40" alt="Брэнд Элджи">
+            <img src="img/vendors-lg.jpg" width="121" height="73" alt="Брэнд Элджи">
           </a>
         </li>
         <li>
           <a class="vendors-item" href="#">
-            <img src="img/vendors-aeg.jpg" width="123" height="40" alt="Брэнд Аег">
+            <img src="img/vendors-aeg.jpg" width="151" height="96" alt="Брэнд Аег">
           </a>
         </li>
         <li>
           <a class="vendors-item" href="#">
-            <img src="img/vendors-metabo.jpg" width="123" height="40" alt="Брэнд Метабо">
+            <img src="img/vendors-metabo.jpg" width="204" height="69" alt="Брэнд Метабо">
           </a>
         </li>
       </ul>
@@ -228,14 +222,14 @@
                 Ведь мы неплохо заработаем, поднимая его на ваш этаж!
               </p>
             </li>
-            <li class="services-detail services-warranty">
+            <li class="services-detail services-warranty display-none">
               <h3 class="services-subtitle">Гарантия</h3>
               <p class="services-specification section-description">
                 Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгаранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. <br>
                 Дом уж восстановите как-нибудь сами.
               </p>
             </li>
-            <li class="services-detail services-credit">
+            <li class="services-detail services-credit  display-none">
               <h3 class="services-subtitle">Кредит</h3>
               <p class="services-specification section-description">
                 Залезть в долговую яму стало проще! <br>
@@ -277,7 +271,7 @@
   </main>
   <footer class="main-footer">
     <div class="footer-top">
-      <div class="container footer-flex">
+      <div class="container">
         <a class="footer-logo"></a>
         <ul class="footer-company">
           <li><a href="#">Компания</a></li>
@@ -286,11 +280,6 @@
           <li><a href="#">Доставка</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
-      </div>
-      <!--container -->
-    </div> <!-- footer-top-->
-    <div class="footer-middle">
-      <div class="container footer-flex">
         <p class="footer-contacts">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
           <a href="tel:+78125550555" class="footer-phone">+7 (812) 555-05-55</a>
         </p>
@@ -304,7 +293,7 @@
       <!--container -->
     </div> <!-- footer-middle-->
     <div class="footer-bottom">
-      <div class="container footer-flex">
+      <div class="container">
         <p>&copy; 2010-2019 Компания "Техномарт" <br>Все права защищены</p>
         <ul class="footer-social-list">
           <li><a class="footer-social footer-vk" href="#"><span class="visually-hidden">Вконтакте</span></a></li>
@@ -324,19 +313,21 @@
   <section class="modal feedback">
     <h2 class="visually-hidden">Обратная свзяь</h2>
     <form class="modal-feedback-form" action="https://echo.htmlacademy.ru" method="post">
-      <label>
-        Ваше имя:
-        <input class="feedback-field" type="text" name="name" placeholder="Имя Фамилия">
-      </label>
-      <label>
-        Ваш e-mail:
-        <input class="feedback-field" type="email" name="email" placeholder="email@example.com">
-      </label>
-      <label>
-        Текст письма:
-        <textarea class="feedback-field" name="letter" placeholder="В свободной форме"></textarea>
-      </label>
-      <div class="feedback-button-wrap">
+      <div class="modal-top">
+        <label>
+          Ваше имя:
+          <input class="feedback-field" type="text" name="name" placeholder="Имя Фамилия">
+        </label>
+        <label>
+          Ваш e-mail:
+          <input class="feedback-field" type="email" name="email" placeholder="email@example.com">
+        </label>
+        <label>
+          Текст письма:
+          <textarea class="feedback-field" name="letter" placeholder="В свободной форме"></textarea>
+        </label>
+      </div>
+      <div class="modal-bottom feedback-button-wrap">
         <button class="button feedback-button" type="submit">Отправить</button>
       </div>
     </form>
@@ -344,9 +335,9 @@
       <span class="visually-hidden">Закрыть</span>
     </button>
   </section>
-  <section class="modal map">
+  <section class="modal-map">
     <h2 class="visually-hidden">Как до нас добраться</h2>
-    <img src="img/map-big.jpg" width="941" height="440" alt="Офис компании по адресу ул. Большая Конюшенная 19, Санкт-Петербург">
+    <img src="img/map-big.jpg" width="940" height="446" alt="Офис компании по адресу ул. Большая Конюшенная 19, Санкт-Петербург">
     <button class="modal-close js-modal-close" type="button">
       <span class="visually-hidden">Закрыть</span>
     </button>
