@@ -27,7 +27,7 @@
     </div>
     <div class="header-bottom">
       <div class="container">
-        <p class="header-description">Интернет-магазин строительных материалов <br>и инструментов для ремонта</p>
+        <p class="header-description">Интернет-магазин строительных материалов и инструментов для ремонта</p>
         <div class="header-info">
           <a class="header-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
           <p class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
@@ -71,7 +71,7 @@
       <div class="columns">
         <div class="promo-slideshow">
           <ul class="promo-slideshow-list">
-            <li class="display-none">
+            <li>
               <h3 class="promo-slideshow-heading">Дрели</h3>
               <p class="promo-description">Соседям на радость!</p>
               <img src="img/promo-slider-2.jpg" width="620" height="266" alt="Дрели">
@@ -198,31 +198,31 @@
       <div class="container">
         <h2 class="section-heading">Сервисы</h2>
         <p class="services-description section-description">
-          Хороший интернет-магазин отличается от плохого не только ценами! <br>
+          Хороший интернет-магазин отличается от плохого не только ценами!
           Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
         </p>
         <div class="services-layout">
           <ul class="services-menu">
-            <li><a class="services-menu-item services-menu-item-current" href="#">Доставка</a></li>
-            <li><a class="services-menu-item" href="#">Гарантия</a></li>
-            <li><a class="services-menu-item" href="#">Кредит</a></li>
+            <li><a class="services-menu-item services-menu-delivery services-menu-item-current" href="#">Доставка</a></li>
+            <li><a class="services-menu-item services-menu-warranty" href="#">Гарантия</a></li>
+            <li><a class="services-menu-item services-menu-credit" href="#">Кредит</a></li>
           </ul>
           <ul class="services-list">
-            <li class="services-detail services-delivery">
+            <li class="services-detail reveal services-delivery">
               <h3 class="services-subtitle">Доставка</h3>
               <p class="services-specification section-description">
                 Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! <br>
                 Ведь мы неплохо заработаем, <br>поднимая его на ваш этаж!
               </p>
             </li>
-            <li class="services-detail services-warranty display-none">
+            <li class="services-detail services-warranty">
               <h3 class="services-subtitle">Гарантия</h3>
               <p class="services-specification section-description">
                 Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгаранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. <br>
                 Дом уж восстановите как-нибудь сами.
               </p>
             </li>
-            <li class="services-detail services-credit display-none">
+            <li class="services-detail services-credit">
               <h3 class="services-subtitle">Кредит</h3>
               <p class="services-specification section-description">
                 Залезть в долговую яму стало проще! <br>
@@ -241,8 +241,7 @@
           Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах
         </p>
         <p class="about-description section-description">
-          Мы можем доставить ваш товар в самые отдаленные точки России! <br>
-          Техномарт работает со многими транспортными компаниями:
+          Мы можем доставить ваш товар в самые отдаленные точки России! Техномарт работает со многими транспортными компаниями:
         </p>
         <ul class="about-transport">
           <li>Деловые линии</li>
@@ -272,7 +271,8 @@
           <li><a href="#">Доставка</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
-        <p class="footer-contacts">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+        <p class="footer-contacts">
+          г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
           <a href="tel:+78125550555" class="footer-phone">+7 (812) 555-05-55</a>
         </p>
         <ul class="footer-products">
@@ -285,8 +285,7 @@
     </div>
     <div class="footer-bottom">
       <div class="container">
-        <p>&copy; 2010–2019 Компания «Техномарт»<br>
-          Все права защищены</p>
+        <p>&copy; 2010–2019 Компания «Техномарт» Все права защищены</p>
         <ul class="footer-social-list">
           <li><a class="footer-social footer-vk" href="#"><span class="visually-hidden">Вконтакте</span></a></li>
           <li><a class="footer-social footer-fb" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
@@ -307,7 +306,7 @@
       <div class="modal-top">
         <label>
           Ваше имя:
-          <input class="feedback-field" type="text" name="name" placeholder="Имя Фамилия">
+          <input class="feedback-field feedback-name" type="text" name="name" placeholder="Имя Фамилия">
         </label>
         <label>
           Ваш e-mail:
@@ -318,7 +317,7 @@
           <textarea class="feedback-field" name="letter" placeholder="В свободной форме"></textarea>
         </label>
       </div>
-      <div class="modal-bottom feedback-button-wrap">
+      <div class="modal-bottom">
         <button class="button feedback-button" type="submit">Отправить</button>
       </div>
     </form>
@@ -328,11 +327,14 @@
   </section>
   <section class="modal modal-map">
     <h2 class="visually-hidden">Как до нас добраться</h2>
-    <img src="img/map-big.jpg" width="940" height="446" alt="Офис компании по адресу ул. Большая Конюшенная 19, Санкт-Петербург">
-    <button class="modal-close js-modal-close" type="button">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" width="940" height="446" allowfullscreen></iframe>
+    <p><img src="img/map-big.jpg" width="940" height="446" alt="Офис компании по адресу ул. Большая Конюшенная 19, Санкт-Петербург"></p>
+    <button class="modal-close js-modal-close map-modal-close" type="button">
       <span class="visually-hidden">Закрыть</span>
     </button>
   </section>
+
+  <script src="js/technomart.js"></script>
 </body>
 
 </html>

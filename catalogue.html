@@ -27,7 +27,7 @@
     </div>
     <div class="header-bottom">
       <div class="container">
-        <p class="header-description">Интернет-магазин строительных материалов <br>и инструментов для ремонта</p>
+        <p class="header-description">Интернет-магазин строительных материалов и инструментов для ремонта</p>
         <div class="header-info">
           <a class="header-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
           <p class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
@@ -74,8 +74,8 @@
             <div class="scale">
               <div class="bar"></div>
             </div>
-            <button class="range-toggle range-toggle-min" type="button"></button>
-            <button class="range-toggle range-toggle-max" type="button"></button>
+            <button class="range-toggle range-toggle-min" type="button" aria-label="Ползунок для выбора минимальной цены"></button>
+            <button class="range-toggle range-toggle-max" type="button" aria-label="Ползунок для выбора максимальной цены"></button>
           </div>
           <label class="visually-hidden range-dash" for="price-min-id">От</label>
           <input class="filters-price-min" id="price-min-id" type="text" name="price-min" value="0">
@@ -174,10 +174,10 @@
             <p class="products-price-new">25500 P.</p>
           </li>
           <li class="products-item new-tip">
-            <a class="button products-buy reveal" href="#">Купить</a>
-            <a class="button products-inbookmarks reveal" href="#">В закладки</a>
+            <a class="button products-buy" href="#">Купить</a>
+            <a class="button products-inbookmarks" href="#">В закладки</a>
             <figure class="products-about">
-              <img class="display-none" src="img/perforator-1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
+              <img src="img/perforator-1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
               <figcaption class="products-name">Перфоратор BOSCH BFG 2000</figcaption>
             </figure>
             <p class="products-price-new">12500 P.</p>
@@ -262,7 +262,7 @@
   </main>
   <footer class="main-footer">
     <div class="footer-top">
-      <div class="container footer-flex">
+      <div class="container">
         <a class="footer-logo"></a>
         <ul class="footer-company">
           <li><a href="#">Компания</a></li>
@@ -271,7 +271,8 @@
           <li><a href="#">Доставка</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
-        <p class="footer-contacts">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+        <p class="footer-contacts">
+          г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
           <a href="tel:+78125550555" class="footer-phone">+7 (812) 555-05-55</a>
         </p>
         <ul class="footer-products">
@@ -284,7 +285,7 @@
     </div>
     <div class="footer-bottom">
       <div class="container footer-flex">
-        <p>&copy; 2010-2019 Компания "Техномарт" <br>Все права защищены</p>
+        <p>&copy; 2010-2019 Компания «Техномарт» Все права защищены</p>
         <ul class="footer-social-list">
           <li><a class="footer-social footer-vk" href="#"><span class="visually-hidden">Вконтакте</span></a></li>
           <li><a class="footer-social footer-fb" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
@@ -304,11 +305,13 @@
       <h2 class="cart-heading">Товар добавлен в корзину</h2>
     </div>
     <div class="modal-bottom">
-      <a class="button cart-order" href="#">Оформить заказ</a>
+      <a class="button cart-order js-modal-close" href="#">Оформить заказ</a>
       <button class="button cart-go-on js-modal-close">Продолжить покупки</button>
     </div>
     <button class="modal-close js-modal-close"><span class="visually-hidden">Закрыть</span></button>
   </section>
+  <script src="js/technomart.js"></script>
+
 </body>
 
 </html>
