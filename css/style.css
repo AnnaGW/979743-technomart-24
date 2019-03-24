@@ -856,7 +856,7 @@ img {
   background-color: #c6beb7;
 }
 
-.promo-slideshow-list li:first-child {
+.promo-slideshow-item {
   display: none;
 }
 
@@ -889,6 +889,30 @@ img {
   top: 208px;
   left: 27px;
   width: 195px;
+}
+
+.promo-slider-id-list {
+  position: absolute;
+  top: 220px;
+  left: 50%;
+  margin-left: -15px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.promo-slider-id {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.promo-slider-id-active {
+  background-color: #ee3643;
 }
 
 .promo-back {
