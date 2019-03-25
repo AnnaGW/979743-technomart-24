@@ -74,8 +74,8 @@
             <div class="scale">
               <div class="bar"></div>
             </div>
-            <button class="range-toggle range-toggle-min" type="button" aria-label="Ползунок для выбора минимальной цены"></button>
-            <button class="range-toggle range-toggle-max" type="button" aria-label="Ползунок для выбора максимальной цены"></button>
+            <button class="range-toggle range-toggle-min" type="button"><span class="visually-hidden">Ползунок для выбора минимальной цены</span></button>
+            <button class="range-toggle range-toggle-max" type="button"><span class="visually-hidden">Ползунок для выбора максимальной цены</span></button>
           </div>
           <label class="visually-hidden range-dash" for="price-min-id">От</label>
           <input class="filters-price-min" id="price-min-id" type="text" name="price-min" value="0">
@@ -86,13 +86,13 @@
           <legend class="strainers-name">Производители:</legend>
           <ul class="strainers-name-list">
             <li class="filter">
-              <input class="filter-input visually-hidden" id="filter-bosch" type="checkbox" name="vendors" value="Bosch" checked>
+              <input class="filter-input visually-hidden" id="filter-bosch" type="checkbox" name="vendors" value="Bosch" checked disabled>
               <label class="filter-label filter-checkbox" for="filter-bosch">
                 Bosch
               </label>
             </li>
             <li class="filter">
-              <input class="filter-input visually-hidden" id="filter-interskol" type="checkbox" name="vendors" value="Interskol">
+              <input class="filter-input visually-hidden" id="filter-interskol" type="checkbox" name="vendors" value="Interskol" disabled>
               <label class="filter-label filter-checkbox" for="filter-interskol">
                 Интерскол
               </label>
@@ -263,7 +263,7 @@
   <footer class="main-footer">
     <div class="footer-top">
       <div class="container">
-        <a class="footer-logo"></a>
+        <a class="footer-logo" href="index.html"></a>
         <ul class="footer-company">
           <li><a href="#">Компания</a></li>
           <li><a href="#">Новости</a></li>

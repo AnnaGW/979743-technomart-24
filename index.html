@@ -71,28 +71,24 @@
       <div class="columns">
         <div class="promo-slideshow">
           <ul class="promo-slideshow-list">
-            <li class="promo-slideshow-item">
+            <li class="promo-slideshow-item reveal">
               <h3 class="promo-slideshow-heading">Дрели</h3>
               <p class="promo-description">Соседям на радость!</p>
               <img src="img/promo-slider-2.jpg" width="620" height="266" alt="Дрели">
               <a class="button promo-slider-link" href="catalogue.html">Открыть каталог</a>
-              <ul class="promo-slider-id-list">
-                <div class="promo-slider-id promo-slider-id-active"></div>
-                <div class="promo-slider-id"></div>
-              </ul>
             </li>
-            <li class="promo-slideshow-item reveal">
+            <li class="promo-slideshow-item">
               <h3 class="promo-slideshow-heading">Перфораторы</h3>
               <p class="promo-description">Настоящие мужские игрушки</p>
               <img src="img/promo-slider-1.jpg" width="620" height="266" alt="Перфораторы">
               <a class="button promo-slider-link" href="catalogue.html">Открыть каталог</a>
-              <ul class="promo-slider-id-list">
-                <div class="promo-slider-id"></div>
-                <div class="promo-slider-id promo-slider-id-active"></div>
-              </ul>
             </li>
           </ul>
-          <button class="promo-back" type="button"><span class="visually-hidden">Назад</span></button>
+          <div class="promo-slider-id-block">
+            <button class="promo-slider-id promo-slider-id-active"></button>
+            <button class="promo-slider-id"></button>
+          </div>
+          <button class="promo-back" type="button" disabled><span class="visually-hidden">Назад</span></button>
           <button class="promo-forward" type="button"><span class="visually-hidden">Вперед</span></button>
         </div>
         <ul class="promo-services promo-offers">
@@ -335,7 +331,8 @@
   </section>
   <section class="modal modal-map">
     <h2 class="visually-hidden">Как до нас добраться</h2>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" width="940" height="446" allowfullscreen></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
+      width="940" height="446" allowfullscreen></iframe>
     <p><img src="img/map-big.jpg" width="940" height="446" alt="Офис компании по адресу ул. Большая Конюшенная 19, Санкт-Петербург"></p>
     <button class="modal-close js-modal-close map-modal-close" type="button">
       <span class="visually-hidden">Закрыть</span>
