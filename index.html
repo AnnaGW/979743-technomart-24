@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>HTML Academy: Техномарт</title>
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/styles.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -338,8 +338,18 @@
       <span class="visually-hidden">Закрыть</span>
     </button>
   </section>
+  <section class="modal cart">
+    <div class="modal-top">
+      <h2 class="cart-heading">Товар добавлен в корзину</h2>
+    </div>
+    <div class="modal-bottom">
+      <a class="button cart-order js-modal-close" href="#">Оформить заказ</a>
+      <button class="button cart-go-on js-modal-close">Продолжить покупки</button>
+    </div>
+    <button class="modal-close js-modal-close"><span class="visually-hidden">Закрыть</span></button>
+  </section>
 
-  <script src="js/technomart.js"></script>
+  <script src="js/scripts.min.js"></script>
 </body>
 
 </html>

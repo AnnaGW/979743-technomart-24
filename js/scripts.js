@@ -21,7 +21,7 @@
   var sliderid1 = document.querySelector(".promo-slider-id-block :first-child");
   var sliderid2 = document.querySelector(".promo-slider-id-block :last-child");
 
-  if (write != null) {
+  if (write) {
     write.addEventListener("click", function(evt) {
       evt.preventDefault();
       feedback.classList.add("reveal-bounce");
@@ -29,7 +29,7 @@
     });
   };
 
-  if (map != null) {
+  if (map) {
     map.addEventListener("click", function(evt) {
       evt.preventDefault();
       modalmap.classList.add("reveal");
@@ -43,13 +43,13 @@
         feedback.classList.remove("reveal-bounce");
         modalmap.classList.remove("reveal");
       }
-      if (cart != null) {
+      if (cart) {
         cart.classList.remove("reveal-expand");
       }
     });
   };
 
-  if (deliveryitem != null) {
+  if (deliveryitem) {
     deliveryitem.addEventListener("click", function(evt) {
       evt.preventDefault();
       deliveryitem.classList.add("services-menu-item-current");
@@ -89,12 +89,12 @@
   window.addEventListener("keydown", function(evt) {
     if (evt.keyCode === 27) {
       evt.preventDefault();
-      if (cart != null) {
+      if (cart) {
         if (cart.classList.contains("reveal-expand")) {
           cart.classList.remove("reveal-expand");
         }
       }
-      if (feedback != null || modalmap != null) {
+      if (feedback || modalmap) {
         if (feedback.classList.contains("reveal-bounce")) {
           feedback.classList.remove("reveal-bounce");
         }
@@ -105,7 +105,7 @@
     }
   });
 
-  if (promoforward != null) {
+  if (promoforward) {
     promoforward.addEventListener("click", function(evt) {
       evt.preventDefault();
       slide1.classList.remove("reveal");
@@ -117,7 +117,7 @@
     });
   };
 
-  if (promoback != null) {
+  if (promoback) {
     promoback.addEventListener("click", function(evt) {
       evt.preventDefault();
       slide2.classList.remove("reveal");
