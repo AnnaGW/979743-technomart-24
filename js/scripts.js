@@ -1,9 +1,13 @@
   var write = document.querySelector(".contacts-write");
   var feedback = document.querySelector(".feedback");
+  var feedbackform = document.querySelector(".modal-feedback-form");
+  var feedbackname = document.querySelector("[name=name]");
+  var feedbackemail = document.querySelector("[name=email]");
+  var feedbackletter = document.querySelector("[name=letter]");
   var map = document.querySelector(".contacts-map");
   var modalmap = document.querySelector(".modal-map");
   var close = document.querySelectorAll(".js-modal-close");
-  var feedbackname = document.querySelector(".feedback-name");
+
   var buyButtons = document.querySelectorAll(".products-buy");
   var cart = document.querySelector(".cart");
 
@@ -28,6 +32,17 @@
       feedbackname.focus();
     });
   };
+  if (feedbackform) {
+    feedbackform.addEventListener("submit", function(evt) {
+      if (!feedbackname.value || !feedbackemail.value || !feedbackletter.value) {
+        evt.preventDefault();
+        feedback.classList.remove("feedback-error");
+        feedback.offsetWidth = feedback.offsetWidth;
+        feedback.classList.add("feedback-error");
+      }
+    });
+  };
+
 
   if (map) {
     map.addEventListener("click", function(evt) {
@@ -41,6 +56,7 @@
       evt.preventDefault();
       if (feedback != null || modalmap != null) {
         feedback.classList.remove("reveal-bounce");
+        feedback.classList.remove("feedback-error");
         modalmap.classList.remove("reveal");
       }
       if (cart) {
@@ -97,6 +113,7 @@
       if (feedback || modalmap) {
         if (feedback.classList.contains("reveal-bounce")) {
           feedback.classList.remove("reveal-bounce");
+          feedback.classList.remove("feedback-error");
         }
         if (modalmap.classList.contains("reveal")) {
           modalmap.classList.remove("reveal");
